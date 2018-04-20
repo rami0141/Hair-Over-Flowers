@@ -1,43 +1,28 @@
 {
-  "name": "final-project",
+  "name": "hair-over-flowers",
   "version": "1.0.0",
   "description": "Hair Salon Appointment Scheduler",
   "main": "server.js",
   "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rami0141/Hair-Over-Flowers.git"
+    "url": "git+https://github.com/jaethao/hair-over-flowers.git"
   },
-  "author": "Cristina Zhang and Maiyer Thao",
+  "author": "Maiyer Thao and Cristina Zhang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rami0141/Hair-Over-Flowers/issues"
+    "url": "https://github.com/jaethao/hair-over-flowers/issues"
   },
-  "homepage": "https://github.com/rami0141/Hair-Over-Flowers#readme",
+  "homepage": "https://github.com/jaethao/hair-over-flowers#readme",
   "dependencies": {
-    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "googleapis": "^27.0.0",
-    "mkdirp": "^0.5.1",
-    "mongoose": "^5.0.14",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.0",
-    "readline": "^1.3.0",
-    "require": "^2.4.20"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.3"
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.6"
   }
 }

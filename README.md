@@ -11,12 +11,12 @@ Coming Soon...
 - [Express](https://www.npmjs.com/package/express) Web server framework for Node.js
 - [Body-parser](https://www.npmjs.com/package/body-parser) Request body parsing middleware for Node.js
 - [Dotenv](https://www.npmjs.com/package/dotenv) Used to obscure passwords and keys
-- [Mongoose](http://mongoosejs.com/docs/index.html) A MongoDB object modeling tool designed to work in an asynchronous environment
+- [Sequelize](http://docs.sequelizejs.com/) An Orm that supports MySQL
 - [Passport](https://www.npmjs.com/package/passport) Used for authentication requests
-- [Passport-Local-Mongoose](https://www.npmjs.com/package/passport-local-mongoose) User authentication
+- [Passport-local](https://www.npmjs.com/package/passport-local) User authentication
 ## Authors
  
-* [Maiyer Thao](https://github.com/jaethao) - Graphic Design, UI, Google Calendar API
+* [Maiyer Thao](https://github.com/jaethao) - Graphic Design, UI, Calendar API
 * [Cristina Zhang](https://github.com/rami0141) - Back-end (database, logic, passport.js)
 
 ## Copyright

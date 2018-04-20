@@ -1,55 +1,39 @@
+// DEPENDENCIES
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const db = mongoose.connection;
-const routes = require("./routes");
-const path = require("path");
-const app = express();
-const PORT = process.env.PORT || 3001;
+var path = require('path');
+// var session = require('express-session');
+// const passport = require('passport')
+require("dotenv").config();
 
-// Configure body parser for AJAX requests
+
+// Sets up the Express Server
+var app = express();
+const PORT = process.env.PORT || 3000;
+
+// Requiring our models for syncing
+ // var db = require("./models");
+
+// Sets up the Express Server to serve static files
+app.use(express.static('./public'))
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// BODY-PARSER MIDDLEWARE
+// Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// Serve up static assets
-app.use(express.static("client/build"));
-// Add routes, both API and view
-app.use(routes);
 
-//---------------------------- MONGOOSE -----------------------------------
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/scheduler");
-// Check connection
-db.once('open', function() {
-	console.log('Connected to MongoDB');
-});
-// Check for DB errors
-db.on('error', function(err) {
-	console.log(err);
-});
+// Routes
+require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 
-//------------------------------ PASSPORT ----------------------------------
-//require passport and passport-local
-const passport = require("passport");
-const LocalStrategy = require('passport-local').Strategy;
+// public folder
+app.use(express.static('./public'))
 
-//In 'app.use' section add this lines for initialize passport and express-session.
-app.use(require('express-session')({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: false
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-
-//passport configuration
-var User = require('./models/user');
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-//------------------------------------------------------------------------
-
-// Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
+// db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+// });

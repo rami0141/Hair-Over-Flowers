@@ -65,6 +65,17 @@ nav a:hover {
   color: black;
 }
 
+#services {
+  background-image: url('../images/service-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #c4f3d3;
+}
+
+#services h1 {
+  font-size: 4em;
+}
+
 #appointments {
   background-color: black;
   color: white;

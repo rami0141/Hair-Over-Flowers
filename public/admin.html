@@ -42,25 +42,26 @@
     </div>
 
     <!-- Appointments -->
+
     <div id="appointments" class="section">
       <div class="container">
       <h2 id="today" class="text-center"></h2>
+      <button type="button" class="btn btn-primary show">Primary</button>
 
       <div id="timeSlots" class="calendar">
         <table class="table table-striped whiteBG">
   <thead>
     <tr>
-      <th scope="col">Time</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone Number</th>
-      <th scope="col">Service</th>
-      <th scope="col">Check in</th>
+      <th scope="col" id="time">Time</th>
+      <th scope="col" id="name">Name</th>
+      <th scope="col" id="email">Email</th>
+      <th scope="col" id="number">Phone Number</th>
+      <th scope="col" id="service">Service</th>
+      <!-- <th scope="col" id="button">Check in</th> -->
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">10:00 am</th>
+ <tbody>
+      <!-- <th scope="row">10:00 am</th>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
@@ -82,7 +83,7 @@
       <td>@twitter</td>
       <td>Haircut</td>
       <td><button>Checked</button></td>
-    </tr>
+    </tr> -->  
   </tbody>
 </table>
       </div>
@@ -160,8 +161,8 @@
   </div>
 
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -171,5 +172,6 @@
     <script src="assets/js/moment.min.js"></script>
     <!-- Logic -->
     <script src="assets/js/logic.js"></script>
+    <script src="assets/js/admin.js"></script>
   </body>
 </html>

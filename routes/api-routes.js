@@ -6,7 +6,6 @@ var db = require("../models");
 module.exports = function (app) {
 
     // GET route for getting all of the appointments
-
     app.get("/api/appointments", function (req, res) {
         // findAll returns all entries for a table when used with no options
         db.Appointment.findAll({}).then(function (dbAppointment) {

@@ -9,4 +9,8 @@ module.exports = function (app) {
     app.get("/adminOnly", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/admin.html"));
     });
+
+    app.get("/form", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/form.html"));
+    });
 };

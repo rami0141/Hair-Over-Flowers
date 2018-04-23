@@ -1,27 +1,29 @@
-console.log('connected');
 
-// fullpage.js
-$('#fullpage').fullpage();
+    console.log('connected');
 
-// moment.js
-var today = $('#today');
-var getDate = moment().format('MMMM Do YYYY, h:mm a');
+    // fullpage.js
+    $('#fullpage').fullpage();
 
-today.text(getDate);
+    // moment.js
+    var today = $('#today');
+    var getDate = moment().format('MMMM Do YYYY, h:mm a');
 
-// hello messgae on user page
-function message() {
-    var greeting;
-    var today = new Date().getHours();
-      if (today < 12) {
-        greeting = "Good Morning!";
-      } else if (today >= 12 && today<= 17) {
-        greeting = "Good Afternoon!";
-      } else {
-        greeting = "Good Evening!";
+    today.text(getDate);
+
+    // hello messgae on user page
+    function message() {
+        var greeting;
+        var today = new Date().getHours();
+          if (today < 12) {
+            greeting = "Good Morning!";
+          } else if (today >= 12 && today<= 17) {
+            greeting = "Good Afternoon!";
+          } else {
+            greeting = "Good Evening!";
+        };
+
+        document.getElementById("helloMessage").innerHTML = greeting;
     };
 
-    document.getElementById("helloMessage").innerHTML = greeting;
-};
-
 message();
+

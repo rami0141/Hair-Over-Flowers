@@ -31,7 +31,7 @@ $(document).ready(function() {
     		$("#email").append("<tr><td>" + email + "</td></tr>");
     		$("#number").append("<tr><td>" + number + "</td></tr>");
     		$("#service").append("<tr><td>" + service + "</td></tr>");
-    		// $("#button").append("<tr><td>")
+    		$("#button").append("<tr><td><button class='btn btn-primary btn-sm'>Check-In</button><td><tr>");
     	}
     }
 }); // end of document.ready function

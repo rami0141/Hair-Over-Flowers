@@ -52,17 +52,14 @@
 .day, .empty {
     float: none;
     width: 14.2857%;
-    /* height: 66px; */
-    /* padding: 24px; */
     text-align: center;
-    /* color: black; */
   }
 
 .adjacent-month, .day-number {
-        opacity: 0.3;
-      }
+    opacity: 0.3;
+  }
 
 .today {
-        background-color: #c4f3d3;
-        color: black;
-      }
+    background-color: #c4f3d3;
+    color: black;
+  }

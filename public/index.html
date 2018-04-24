@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <!-- fullpage.js -->
     <link rel="stylesheet" href="assets/css/jquery.fullpage.min.css">
+    <!-- cldnr css -->
+    <link rel="stylesheet" href="assets/css/full-clndr.css" />
     <!-- CSS Style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Hair Over Flowers</title>
@@ -31,7 +33,7 @@
             <a class="nav-link" href="#stylists">Stylists</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#calendar">Calendar</a>
+            <a class="nav-link" href="#schedule">Calendar</a>
           </li>
         </ul>
           <a href="login.html"><button class="btn btn-outline-light" type="button">Login</button></a>
@@ -44,7 +46,7 @@
         <div class="container">
           <div class="text-center">
             <h1 id="helloMessage">Hello!</h1>
-          <a href="#calendar">
+          <a href="#schedule">
               <button type="button" class="btn-lg btn btn-outline-dark">Get hair done!</button>
           </a>
         </div>
@@ -119,7 +121,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et justo neque. Phasellus eu ornare dui, viverra cursus neque. Vestibulum rhoncus, tellus sit amet bibendum ullamcorper, sapien ante fermentum quam, quis convallis quam dui eu felis. In congue magna in ex dapibus, a viverra lacus bibendum. Duis imperdiet convallis maximus.
                   Cras laoreet ullamcorper quam quis fermentum.
                 </p>
-                <a href="#calendar">
+                <a href="#schedule">
                     <button type="button" class="btn-lg btn btn-outline-light">Book now!</button>
                 </a>
               </div>
@@ -135,7 +137,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et justo neque. Phasellus eu ornare dui, viverra cursus neque.
                   Vestibulum rhoncus, tellus sit amet bibendum ullamcorper, sapien ante fermentum quam, quis convallis quam dui eu felis. In congue magna in ex dapibus, a viverra lacus bibendum. Duis imperdiet convallis maximus. Cras laoreet ullamcorper quam quis fermentum. Sed sed semper sapien, vitae varius libero.
                 </p>
-                <a href="#calendar">
+                <a href="#schedule">
                     <button type="button" class="btn-lg btn btn-outline-light">Book now!</button>
                 </a>
               </div>
@@ -145,71 +147,144 @@
         </div>
         </div>
         <!-- calendar -->
-      <div id="calendar" class="section">
+      <div id="schedule" class="section">
         <div class="container">
-          <h2 id="month" class="text-center">April 2018</h2>
-          <div id="activeCalender" class="calendar">
+          <div id="calendarSection">
+          <div class="row">
+            <div class="col-lg-8">
+              <!-- calendar -->
+              <div id="full-clndr">
+              </div>
+            </div>
 
-            <div class="row">
-              <div class="col-sm-12">
-                <table align="center">
-          <thead>
-            <tr>
-              <th scope="col"><h3 class="text-center">S</h3></th>
-              <th scope="col"><h3 class="text-center">M</h3></th>
-              <th scope="col"><h3 class="text-center">T</h3></th>
-              <th scope="col"><h3 class="text-center">W</h3></th>
-              <th scope="col"><h3 class="text-center">T</h3></th>
-              <th scope="col"><h3 class="text-center">F</h3></th>
-              <th scope="col"><h3 class="text-center">S</h3></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
+            <div class="col-lg-4">
+              <h4>Salon is open Monday to Saturday from 9am to 6pm.
+                Please call at least 24 hr ahead to cancel an appointment.</h4>
+                <br>
+              <button type="button" class="btn btn-outline-dark btn-lg" id="appointmentBtn">
+                Book an appointment!</button>
+            </div>
+            </div>
+            </div>
+
+            <!-- modal is hidden until button is clicked-->
+            <div id="appointmentForm">
+              <div class="card">
+                <div class="card-body">
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-md-4">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="number">Phone Number</label>
+                          <input type="text" class="form-control" id="number" placeholder="000-000-0000" required>
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="email" required>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label for="type">Service Type</label>
+                          <select class="form-control" id="serviceType" required>
+                              <option disabled selected>Services</option>
+                            <option>Haircut</option>
+                            <option>Shampooing</option>
+                            <option>Coloring</option>
+                              <option>Styling</option>
+                              <option>Extensions (consultant)</option>
+                              <option>Extensions</option>
+                         </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="exampleFormControlSelect1">Stylist</label>
+                          <select class="form-control" id="stylist" required>
+                            <option disabled selected>Stylist</option>
+                            <option>Mika Tan</option>
+                            <option>Roslina Jung</option>
+                         </select>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                          <label for="inputState">Appointment Month</label>
+                            <select id="appMonth" class="form-control" required>
+                              <option disabled selected>Month</option>
+                              <option>April</option>
+                              <option>May</option>
+                              <option>June</option>
+                              <option>July</option>
+                              <option>August</option>
+                              <option>September</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                        <label for="inputState">Appointment Day</label>
+                            <select id="appDay" class="form-control" required>
+                              <option disabled selected>Day</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                              <option>21</option>
+                              <option>22</option>
+                              <option>23</option>
+                              <option>24</option>
+                              <option>25</option>
+                              <option>26</option>
+                              <option>27</option>
+                              <option>28</option>
+                              <option>29</option>
+                              <option>30</option>
+                              <option>31</option>
+                            </select>
+                          </div>
+
+                        <div class="form-group col-md-4">
+                          <label for="exampleFormControlSelect1">Appointment Time</label>
+                          <select class="form-control" id="appTime" required>
+                            <option disabled selected>Time</option>
+                            <option>9:00am</option>
+                            <option>10:00am</option>
+                            <option>11:00am</option>
+                              <option>1:00pm</option>
+                                <option>2:00pm</option>
+                                <option>3:00am</option>
+                              <option>4:00pm</option>
+                                <option>5:00pm</option>
+                                <option>6:00pm</option>
+                         </select>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="comments">Comments</label>
+                          <textarea class="form-control" id="comments" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="submitForm" type="submit">Submit Appointment Request</button>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+          </div>
       </div>
     </div>
 
@@ -223,6 +298,10 @@ crossorigin="anonymous"></script>
   <script src="assets/js/jquery.fullpage.min.js"></script>
   <!-- moment.js -->
   <script src="assets/js/moment.min.js"></script>
+  <!-- underscore -->
+  <script src="assets/js/underscore-min.js"></script>
+  <!-- clndr -->
+  <script src="assets/js/clndr.min.js"></script>
   <!-- Logic -->
   <script src="assets/js/logic.js"></script>
 </body>

@@ -25,7 +25,7 @@ $(document).ready(function() {
     		email = appointmentArray[i].email;
     		number = appointmentArray[i].phone;
     		service = appointmentArray[i].service;
-    	
+
     		$("#time").append("<tr><td>" + appTime + "</td></tr>");
     		$("#name").append("<tr><td>" + name+ "</td></tr>");
     		$("#email").append("<tr><td>" + email + "</td></tr>");

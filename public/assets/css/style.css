@@ -89,11 +89,6 @@ nav a:hover {
   height: 500px  ;
 }
 
-.calendar {
-  padding-top: 1em;
-  padding-bottom: 3em;
-}
-
 .whiteBG {
   background-color: white;
   color: black;
@@ -107,18 +102,10 @@ nav a:hover {
   height: 60px;
 }
 
-th {
-padding-left: 1em;
-padding-right: 1em;
-}
-
 td {
   padding: 1em 1em 1em 1em;
 }
 
-td h3 {
-  padding-top: .35em;
-}
 
 #helloMessage {
   font-size: 5em;

@@ -1,5 +1,5 @@
 #full-clndr {
-  width: 90%;
+  width: 85%;
   font-family: 'Abril Fatface', cursive;
   font-size: 1.5em;
   -moz-box-shadow: 0px 4px 0 darken(black, 5%);
@@ -7,9 +7,8 @@
   box-shadow: 0px 4px 0 darken(black, 5%);
 }
 
-/* month */
 .clndr-controls {
-  padding: 0 .5em .5em .5em;
+  padding: 0 .25em .25em .25em;
   color: black;
   text-align: center;
 }
@@ -41,9 +40,14 @@
     color: black;
   }
 
-/* .days {
-    width: 100%;
-  } */
+.day {
+  background-color: black;
+  border-radius: 25%;
+  border: 5px solid white;
+  color: white;
+  width: 30px;
+  height: 30px;
+  }
 
 .day, .empty {
     float: none;
@@ -51,7 +55,7 @@
     /* height: 66px; */
     /* padding: 24px; */
     text-align: center;
-    color: black;
+    /* color: black; */
   }
 
 .adjacent-month, .day-number {
@@ -59,5 +63,6 @@
       }
 
 .today {
-        color: #c4f3d3;
+        background-color: #c4f3d3;
+        color: black;
       }

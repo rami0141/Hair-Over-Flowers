@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <!-- fullpage.js -->
     <link rel="stylesheet" href="assets/css/jquery.fullpage.min.css">
+    <!-- cldnr css -->
+    <link rel="stylesheet" href="assets/css/full-clndr.css">
     <!-- CSS Style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Hair Over Flowers</title>
@@ -46,8 +48,8 @@
     <div id="appointments" class="section">
       <div class="container">
       <h2 id="today" class="text-center"></h2>
-      <button type="button" class="btn btn-primary show">Primary</button>
-
+      <br>
+    <!-- timeslots -->
       <div id="timeSlots" class="calendar">
         <table class="table table-striped whiteBG">
   <thead>
@@ -57,33 +59,10 @@
       <th scope="col" id="email">Email</th>
       <th scope="col" id="number">Phone Number</th>
       <th scope="col" id="service">Service</th>
-      <!-- <th scope="col" id="button">Check in</th> -->
     </tr>
   </thead>
  <tbody>
-      <!-- <th scope="row">10:00 am</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Haircut</td>
-      <td><button>Checked</button></td>
-    </tr>
-    <tr>
-      <th scope="row">11:00 am</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>Haircut</td>
-      <td><button>Checked</button></td>
-    </tr>
-    <tr>
-      <th scope="row">1:00 pm</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Haircut</td>
-      <td><button>Checked</button></td>
-    </tr> -->
+    <!-- Dynamic display of appointment for the day -->
   </tbody>
 </table>
       </div>
@@ -91,74 +70,19 @@
     </div>
 
     <div id="schedule" class="container section">
-      <h2 id="month" class="text-center">April 2018</h2>
-      <div id="activeCalender" class="calendar">
-
         <div class="row">
-          <div class="col-sm-12">
-            <table align="center">
-      <thead>
-        <tr>
-          <th scope="col"><h3 class="text-center">S</h3></th>
-          <th scope="col"><h3 class="text-center">M</h3></th>
-          <th scope="col"><h3 class="text-center">T</h3></th>
-          <th scope="col"><h3 class="text-center">W</h3></th>
-          <th scope="col"><h3 class="text-center">T</h3></th>
-          <th scope="col"><h3 class="text-center">F</h3></th>
-          <th scope="col"><h3 class="text-center">S</h3></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><h3 class="circle text-center">1</h3></td>
-          <td><h3 class="circle text-center">2</h3></td>
-          <td><h3 class="circle text-center">3</h3></td>
-          <td><h3 class="circle text-center">4</h3></td>
-          <td><h3 class="circle text-center">5</h3></td>
-          <td><h3 class="circle text-center">6</h3></td>
-          <td><h3 class="circle text-center">7</h3></td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td><h3 class="circle text-center">1</h3></td>
-          <td><h3 class="circle text-center">2</h3></td>
-          <td><h3 class="circle text-center">3</h3></td>
-          <td><h3 class="circle text-center">4</h3></td>
-          <td><h3 class="circle text-center">5</h3></td>
-          <td><h3 class="circle text-center">6</h3></td>
-          <td><h3 class="circle text-center">7</h3></td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td><h3 class="circle text-center">1</h3></td>
-          <td><h3 class="circle text-center">2</h3></td>
-          <td><h3 class="circle text-center">3</h3></td>
-          <td><h3 class="circle text-center">4</h3></td>
-          <td><h3 class="circle text-center">5</h3></td>
-          <td><h3 class="circle text-center">6</h3></td>
-          <td><h3 class="circle text-center">7</h3></td>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td><h3 class="circle text-center">1</h3></td>
-          <td><h3 class="circle text-center">2</h3></td>
-          <td><h3 class="circle text-center">3</h3></td>
-          <td><h3 class="circle text-center">4</h3></td>
-          <td><h3 class="circle text-center">5</h3></td>
-          <td><h3 class="circle text-center">6</h3></td>
-          <td><h3 class="circle text-center">7</h3></td>
-        </tr>
-      </tbody>
-    </table>
+          <div class="col-md-8">
+            <!-- calendar -->
+            <div id="full-clndr">
+            </div>
+          </div>
+          <div class="col-md-4">
+
           </div>
         </div>
       </div>
-
     </div>
-  </div>
+
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -170,6 +94,10 @@
     <script src="assets/js/jquery.fullpage.min.js"></script>
     <!-- moment.js -->
     <script src="assets/js/moment.min.js"></script>
+    <!-- underscore -->
+    <script src="assets/js/underscore-min.js"></script>
+    <!-- clndr -->
+    <script src="assets/js/clndr.min.js"></script>
     <!-- Logic -->
     <script src="assets/js/logic.js"></script>
     <script src="assets/js/admin.js"></script>

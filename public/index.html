@@ -155,8 +155,8 @@
               <!-- calendar -->
               <div id="full-clndr">
           </div>
-
             </div>
+
             <div class="col-lg-4">
               <h4>Salon is open Monday to Saturday from 9am to 6pm.
                 Please call at least 24 hr ahead to cancel an appointment.</h4>
@@ -165,11 +165,9 @@
                 Book an appointment!</button>
             </div>
             </div>
-
-
             </div>
 
-            <!-- modal -->
+            <!-- modal is hidden until button is clicked-->
             <div id="appointmentForm">
               <div class="card">
                 <div class="card-body">
@@ -177,33 +175,33 @@
                       <div class="row">
                         <div class="form-group col-md-4">
                           <label for="name">Name</label>
-                          <input type="text" class="form-control" id="name" placeholder="Full Name">
+                          <input type="text" class="form-control" id="name" placeholder="Full Name" required>
                         </div>
                         <div class="form-group col-md-4">
                           <label for="number">Phone Number</label>
-                          <input type="text" class="form-control" id="number" placeholder="000-000-0000">
+                          <input type="text" class="form-control" id="number" placeholder="000-000-0000" required>
                       </div>
                       <div class="form-group col-md-4">
                           <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="jane@gmail.com">
+                          <input type="email" class="form-control" id="email" placeholder="email" required>
                       </div>
                       </div>
                       <div class="row">
                         <div class="form-group col-md-6">
                           <label for="type">Service Type</label>
-                          <select class="form-control" id="serviceType">
+                          <select class="form-control" id="serviceType" required>
                               <option disabled selected>Services</option>
-                            <option>Hair Cut</option>
+                            <option>Haircut</option>
                             <option>Shampooing</option>
-                            <option>Hair Coloring</option>
-                              <option>Hair Styling</option>
-                              <option>Hair Extensions (consultant)</option>
-                              <option>Hair Extensions</option>
+                            <option>Coloring</option>
+                              <option>Styling</option>
+                              <option>Extensions (consultant)</option>
+                              <option>Extensions</option>
                          </select>
                         </div>
                         <div class="form-group col-md-6">
                           <label for="exampleFormControlSelect1">Stylist</label>
-                          <select class="form-control" id="stylist">
+                          <select class="form-control" id="stylist" required>
                             <option disabled selected>Stylist</option>
                             <option>Mika Tan</option>
                             <option>Roslina Jung</option>
@@ -213,7 +211,7 @@
                         <div class="form-row">
                           <div class="form-group col-md-4">
                           <label for="inputState">Appointment Month</label>
-                            <select id="appMonth" class="form-control">
+                            <select id="appMonth" class="form-control" required>
                               <option disabled selected>Month</option>
                               <option>April</option>
                               <option>May</option>
@@ -225,7 +223,7 @@
                           </div>
                           <div class="form-group col-md-4">
                         <label for="inputState">Appointment Day</label>
-                            <select id="appDay" class="form-control">
+                            <select id="appDay" class="form-control" required>
                               <option disabled selected>Day</option>
                               <option>1</option>
                               <option>2</option>
@@ -263,7 +261,7 @@
 
                         <div class="form-group col-md-4">
                           <label for="exampleFormControlSelect1">Appointment Time</label>
-                          <select class="form-control" id="appTime">
+                          <select class="form-control" id="appTime" required>
                             <option disabled selected>Time</option>
                             <option>9:00am</option>
                             <option>10:00am</option>
@@ -278,82 +276,15 @@
                         </div>
                         </div>
                         <div class="form-group">
-                          <label for="exampleFormControlTextarea1">Comments</label>
+                          <label for="comments">Comments</label>
                           <textarea class="form-control" id="comments" rows="3"></textarea>
                         </div>
                         <button class="btn btn-primary" id="submitForm" type="submit">Submit Appointment Request</button>
                     </form>
                     </div>
-                    </div>
-                    </div>
-
-
-
-
-
-          <!-- <h2 id="month" class="text-center">April 2018</h2>
-          <div id="activeCalender" class="calendar">
-
-            <div class="row">
-              <div class="col-sm-12">
-                <table align="center">
-          <thead>
-            <tr>
-              <th scope="col"><h3 class="text-center">S</h3></th>
-              <th scope="col"><h3 class="text-center">M</h3></th>
-              <th scope="col"><h3 class="text-center">T</h3></th>
-              <th scope="col"><h3 class="text-center">W</h3></th>
-              <th scope="col"><h3 class="text-center">T</h3></th>
-              <th scope="col"><h3 class="text-center">F</h3></th>
-              <th scope="col"><h3 class="text-center">S</h3></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td><h3 class="circle text-center">1</h3></td>
-              <td><h3 class="circle text-center">2</h3></td>
-              <td><h3 class="circle text-center">3</h3></td>
-              <td><h3 class="circle text-center">4</h3></td>
-              <td><h3 class="circle text-center">5</h3></td>
-              <td><h3 class="circle text-center">6</h3></td>
-              <td><h3 class="circle text-center">7</h3></td>
-            </tr>
-          </tbody>
-        </table> -->
-        </div>
+                  </div>
+                </div>
+          </div>
       </div>
     </div>
 

@@ -4,7 +4,6 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
-
 #loginBG {
   background-color: black;
   background-image: url('../images/hairBG1.jpg');
@@ -25,16 +24,13 @@ h1, h2, h3 {
   color: black;
 }
 
-form {
-  color: white;
-}
-
 #loginForm {
   padding-right: 1em;
   padding-left: 1em;
   padding-top: 3em;
   padding-bottom: 3em;
   background-color: black;
+  color: white;
 }
 
 #formBtns {
@@ -85,9 +81,8 @@ nav a:hover {
   color: #c4f3d3;
 }
 
-.calendar {
-  padding-top: 1em;
-  padding-bottom: 3em;
+#appointmentForm {
+  height: 500px  ;
 }
 
 .whiteBG {
@@ -95,25 +90,8 @@ nav a:hover {
   color: black;
 }
 
-.circle {
-  background-color: black;
-  border-radius: 50%;
-  color: white;
-  width: 60px;
-  height: 60px;
-}
-
-th {
-padding-left: 1em;
-padding-right: 1em;
-}
-
 td {
   padding: 1em 1em 1em 1em;
-}
-
-td h3 {
-  padding-top: .35em;
 }
 
 #helloMessage {

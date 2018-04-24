@@ -1,15 +1,15 @@
-  console.log('connected');
-
-    // fullpage.js
+// fullpage.js
     $('#fullpage').fullpage();
 
-    // moment.js
+
+// moment.js
     var today = $('#today');
     var getDate = moment().format('MMMM Do YYYY, h:mm a');
 
     today.text(getDate);
 
-    // hello messgae on user page
+
+// hello messgae on user page
     function message() {
         var greeting;
         var today = new Date().getHours();
@@ -26,18 +26,18 @@
 
 message();
 
-// clndr function
+
+ // clndr function for the calender
 $(function() {
- $('#calendar').clndr({
- template: $('#calendar-template').html(),
- });
+  $('#full-clndr').clndr();
 });
 
-//form hide and triggered by button
+
+ //form hide and triggered by appointment button
 $('#appointmentForm').hide();
 
-  var form = $('#appointmentForm');
-  var calContent = $('#calendarSection');
+    var form = $('#appointmentForm');
+    var calContent = $('#calendarSection');
 
 $('#appointmentBtn').click( function(){
     calContent.fadeOut();

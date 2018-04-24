@@ -1,0 +1,63 @@
+#full-clndr {
+  width: 90%;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.5em;
+  -moz-box-shadow: 0px 4px 0 darken(black, 5%);
+  -webkit-box-shadow: 0px 4px 0 darken(black, 5%);
+  box-shadow: 0px 4px 0 darken(black, 5%);
+}
+
+/* month */
+.clndr-controls {
+  padding: 0 .5em .5em .5em;
+  color: black;
+  text-align: center;
+}
+
+.clndr-previous-button {
+  float: left;
+  text-align: left;
+  color: black;
+  font-size: .75em;
+}
+
+.clndr-next-button {
+  float: right;
+  text-align: right;
+  color: black;
+  font-size: .75em;
+}
+
+.clndr-previous-button, .clndr-next-button {
+  width: 1em;
+  cursor: pointer;
+}
+
+.header-day {
+    float: none;
+    width: 14.2857%;
+    padding: .5em 1.5em .5em 1.5em;
+    text-align: center;
+    color: black;
+  }
+
+/* .days {
+    width: 100%;
+  } */
+
+.day, .empty {
+    float: none;
+    width: 14.2857%;
+    /* height: 66px; */
+    /* padding: 24px; */
+    text-align: center;
+    color: black;
+  }
+
+.adjacent-month, .day-number {
+        opacity: 0.3;
+      }
+
+.today {
+        color: #c4f3d3;
+      }

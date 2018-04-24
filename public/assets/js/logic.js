@@ -1,5 +1,4 @@
-
-    console.log('connected');
+  console.log('connected');
 
     // fullpage.js
     $('#fullpage').fullpage();
@@ -27,3 +26,20 @@
 
 message();
 
+// clndr function
+$(function() {
+ $('#calendar').clndr({
+ template: $('#calendar-template').html(),
+ });
+});
+
+//form hide and triggered by button
+$('#appointmentForm').hide();
+
+  var form = $('#appointmentForm');
+  var calContent = $('#calendarSection');
+
+$('#appointmentBtn').click( function(){
+    calContent.fadeOut();
+    form.fadeIn();
+  });

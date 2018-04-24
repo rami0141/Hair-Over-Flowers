@@ -85,6 +85,10 @@ nav a:hover {
   color: #c4f3d3;
 }
 
+#appointmentForm {
+  height: 500px;
+}
+
 .calendar {
   padding-top: 1em;
   padding-bottom: 3em;

@@ -31,7 +31,7 @@
             <a class="nav-link" href="#stylists">Stylists</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#calendar">Calendar</a>
+            <a class="nav-link" href="#schedule">Calendar</a>
           </li>
         </ul>
           <a href="login.html"><button class="btn btn-outline-light" type="button">Login</button></a>
@@ -145,9 +145,148 @@
         </div>
         </div>
         <!-- calendar -->
-      <div id="calendar" class="section">
+      <div id="schedule" class="section">
         <div class="container">
-          <h2 id="month" class="text-center">April 2018</h2>
+          <div id="calendarSection">
+          <div class="row">
+            <div class="col-lg-8">
+              <div id="calendar">
+              </div>
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+            </div>
+            <br>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-dark btn-lg" id="appointmentBtn">
+                Book an appointment!</button>
+            </div>
+            </div>
+
+            <!-- modal -->
+            <div id="appointmentForm">
+              <div class="card">
+                <div class="card-body">
+                    <form>
+                      <div class="row">
+                        <div class="form-group col-md-4">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Full Name">
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="number">Phone Number</label>
+                          <input type="text" class="form-control" id="number" placeholder="000-000-0000">
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" placeholder="jane@gmail.com">
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group col-md-6">
+                          <label for="type">Service Type</label>
+                          <select class="form-control" id="serviceType">
+                              <option disabled selected>Services</option>
+                            <option>Hair Cut</option>
+                            <option>Shampooing</option>
+                            <option>Hair Coloring</option>
+                              <option>Hair Styling</option>
+                              <option>Hair Extensions (consultant)</option>
+                              <option>Hair Extensions</option>
+                         </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="exampleFormControlSelect1">Stylist</label>
+                          <select class="form-control" id="stylist">
+                            <option disabled selected>Stylist</option>
+                            <option>Mika Tan</option>
+                            <option>Roslina Jung</option>
+                         </select>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                          <label for="inputState">Appointment Month</label>
+                            <select id="appMonth" class="form-control">
+                              <option disabled selected>Month</option>
+                              <option>April</option>
+                              <option>May</option>
+                              <option>June</option>
+                              <option>July</option>
+                              <option>August</option>
+                              <option>September</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                        <label for="inputState">Appointment Day</label>
+                            <select id="appDay" class="form-control">
+                              <option disabled selected>Day</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                              <option>21</option>
+                              <option>22</option>
+                              <option>23</option>
+                              <option>24</option>
+                              <option>25</option>
+                              <option>26</option>
+                              <option>27</option>
+                              <option>28</option>
+                              <option>29</option>
+                              <option>30</option>
+                              <option>31</option>
+                            </select>
+                          </div>
+
+                        <div class="form-group col-md-4">
+                          <label for="exampleFormControlSelect1">Appointment Time</label>
+                          <select class="form-control" id="appTime">
+                            <option disabled selected>Time</option>
+                            <option>9:00am</option>
+                            <option>10:00am</option>
+                            <option>11:00am</option>
+                              <option>1:00pm</option>
+                                <option>2:00pm</option>
+                                <option>3:00am</option>
+                              <option>4:00pm</option>
+                                <option>5:00pm</option>
+                                <option>6:00pm</option>
+                         </select>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Comments</label>
+                          <textarea class="form-control" id="comments" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="submitForm" type="submit">Submit Appointment Request</button>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+
+
+
+
+
+          <!-- <h2 id="month" class="text-center">April 2018</h2>
           <div id="activeCalender" class="calendar">
 
             <div class="row">
@@ -208,7 +347,7 @@
               <td><h3 class="circle text-center">7</h3></td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
         </div>
       </div>
     </div>
@@ -223,6 +362,10 @@ crossorigin="anonymous"></script>
   <script src="assets/js/jquery.fullpage.min.js"></script>
   <!-- moment.js -->
   <script src="assets/js/moment.min.js"></script>
+  <!-- underscore -->
+  <script src="assets/js/underscore-min.js"></script>
+  <!-- clndr -->
+  <script src="assets/js/clndr.min.js"></script>
   <!-- Logic -->
   <script src="assets/js/logic.js"></script>
 </body>

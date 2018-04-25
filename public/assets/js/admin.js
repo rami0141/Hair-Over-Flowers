@@ -1,5 +1,5 @@
 $(document).ready(function() { 
-	$(document).on("click", "#app", getAppointments);
+	// $(document).on("click", "#app", getAppointments);
 	var appointmentArray = [];
 	var appTime;
 	var name;
@@ -7,14 +7,14 @@ $(document).ready(function() {
 	var number;
 	var service;
 
-	function getAppointments() {
+	$(window).on("load", function getAppointments() {
 	$.get("/api/appointments", function (data) {
         appointmentArray = data;
         console.log("Array", appointmentArray);
         loopingAppointments(appointmentArray);
        // console.log(appointmentArray[2].name);
     });
-  }
+  });
 
 	// This function will loop through all appointments
     function loopingAppointments(appointmentArray) {

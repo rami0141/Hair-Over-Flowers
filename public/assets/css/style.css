@@ -4,6 +4,19 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
+.fancy-text {
+  font-family: 'Abril Fatface', cursive;
+  padding: .5em;
+}
+
+.padded {
+  padding: 1em;
+}
+
+#timeSlots table {
+  border: 10px solid #c4f3d3;
+}
+
 #loginBG {
   background-color: black;
   background-image: url('../images/hairBG1.jpg');

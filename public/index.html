@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Google Font Abril -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <!-- fullpage.js -->
@@ -83,8 +83,8 @@
               </ul>
               <h2 class="text-white">Hair Extensions</h2>
               <ul>
-                <li><strong>Volume</strong>.....750 and up (free consultant required)</li>
-                <li><strong>Volume and Length</strong>.....1000 and up (free consultant required)</li>
+                <li><strong>Volume</strong>.....750 and up (free consultantion required)</li>
+                <li><strong>Volume and Length</strong>.....1000 and up (free consultantion required)</li>
               </ul>
             </div>
           </div>
@@ -157,8 +157,10 @@
             </div>
 
             <div class="col-lg-4">
-              <h4>Salon is open Monday to Saturday from 9am to 6pm.
-                Please call at least 24 hr ahead to cancel an appointment.</h4>
+              <h5>
+                Salon is open Monday to Saturday from 9am to 6pm. Appointments only!
+                Please call 24 hr ahead to cancel an appointment.
+              </h5>
                 <br>
               <button type="button" class="btn btn-outline-dark btn-lg" id="appointmentBtn">
                 Book an appointment!</button>
@@ -194,7 +196,9 @@
                             <option>Shampooing</option>
                             <option>Coloring</option>
                               <option>Styling</option>
-                              <option>Extensions (consultant)</option>
+                              <option>Perm</option>
+                              <option>Brazilian Blowout</option>
+                              <option>Extensions (consultantion)</option>
                               <option>Extensions</option>
                          </select>
                         </div>
@@ -278,7 +282,8 @@
                           <label for="comments">Comments</label>
                           <textarea class="form-control" id="comments" rows="3"></textarea>
                         </div>
-                        <button class="btn btn-primary" id="submitForm" type="submit">Submit Appointment Request</button>
+                        <span><button class="btn btn-dark" id="submitForm" type="submit">Submit</button></span>
+                        <span><button id="cancelForm" class="btn btn-danger">Cancel</button></span>
                     </form>
                     </div>
                   </div>
@@ -292,7 +297,7 @@
 crossorigin="anonymous"></script>
   <!-- Bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
   <!-- fullpage.js -->
   <script src="assets/js/jquery.fullpage.min.js"></script>
   <!-- moment.js -->

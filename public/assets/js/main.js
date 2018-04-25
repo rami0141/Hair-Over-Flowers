@@ -55,6 +55,6 @@ $(document).ready(function() {
     $.post("/api/appointments", newAppointment).done(function (data) {
       console.log("database post:", data);
     });
-    document.getElementById("appointmentForm").reset();
+    document.getElementById("resetForm").reset();
   }
 }); // end of document.ready function

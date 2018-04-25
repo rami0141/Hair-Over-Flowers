@@ -10,8 +10,18 @@ CREATE TABLE appointments (
   appDay VARCHAR(100) NOT NULL,
   appTime VARCHAR(100) NULL,
   stylist VARCHAR(100) NULL,
-  comments VARCHAR(100) NULL,
+  comments VARCHAR(300) NULL,
   createdAt datetime DEFAULT NULL,	
   updatedAt datetime DEFAULT NULL,	
   PRIMARY KEY (id)	
 );
+
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  -- name VARCHAR(30)NOT NULL,
+  username VARCHAR(30)NOT NULL,
+  password VARCHAR(30)NOT NULL,
+  createdAt datetime DEFAULT NULL,  
+  updatedAt datetime DEFAULT NULL,  
+  PRIMARY KEY (id)
+)

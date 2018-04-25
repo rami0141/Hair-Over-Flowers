@@ -1,5 +1,5 @@
 $(document).ready(function() { 
-	$(document).on("click", ".show", getAppointments);
+	$(document).on("click", "#app", getAppointments);
 	var appointmentArray = [];
 	var appTime;
 	var name;
@@ -25,13 +25,23 @@ $(document).ready(function() {
     		email = appointmentArray[i].email;
     		number = appointmentArray[i].phone;
     		service = appointmentArray[i].service;
+            comments = appointmentArray[i].comments;
 
+            // dynamically creates table - The comments section is commented out
     		$("#time").append("<tr><td>" + appTime + "</td></tr>");
     		$("#name").append("<tr><td>" + name+ "</td></tr>");
-    		$("#email").append("<tr><td>" + email + "</td></tr>");
+    		// $("#email").append("<tr><td>" + email + "</td></tr>");
     		$("#number").append("<tr><td>" + number + "</td></tr>");
     		$("#service").append("<tr><td>" + service + "</td></tr>");
-    		$("#button").append("<tr><td><button class='btn btn-primary btn-sm'>Check-In</button><td><tr>");
+            // $("#comments").append("<tr><td>" + comments + "</td></tr>");
+    		$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete'>Check-In</button><td><tr>");
     	}
-    }
+    }// End of loopingAppointments functions
+
+    // click even for the check-in button
+    // $(document).on("click", ".checkIn", deleteAppointment);
+
+    // function deleteAppointment {
+
+    // }
 }); // end of document.ready function

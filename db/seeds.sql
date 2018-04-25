@@ -16,9 +16,11 @@ CREATE TABLE appointments (
   PRIMARY KEY (id)	
 );
 
+USE scheduler_db;
+
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
-  -- name VARCHAR(30)NOT NULL,
+  name VARCHAR(30)NOT NULL,
   username VARCHAR(30)NOT NULL,
   password VARCHAR(30)NOT NULL,
   createdAt datetime DEFAULT NULL,  

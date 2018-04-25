@@ -1,4 +1,4 @@
-$(document).ready(function() { 
+$(document).ready(function() {
 	// $(document).on("click", "#app", getAppointments);
 	var appointmentArray = [];
 	var appTime;
@@ -34,7 +34,8 @@ $(document).ready(function() {
     		$("#number").append("<tr><td>" + number + "</td></tr>");
     		$("#service").append("<tr><td>" + service + "</td></tr>");
             // $("#comments").append("<tr><td>" + comments + "</td></tr>");
-    		$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete'>Check-In</button><td><tr>");
+    		// $("#button").append("<tr><td><button class='btn btn-primary btn-sm delete'>Check-In</button></td></tr>");
+				$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
     	}
     }// End of loopingAppointments functions
 

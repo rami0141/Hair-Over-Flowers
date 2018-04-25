@@ -67,3 +67,7 @@
     background-color: #c4f3d3;
     color: black;
   }
+
+  td {
+    padding: 1em 1em 1em 1em;
+  }

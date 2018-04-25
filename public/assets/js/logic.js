@@ -2,13 +2,6 @@
     $('#fullpage').fullpage();
 
 
-// moment.js
-    var today = $('#today');
-    var getDate = moment().format('MMMM Do YYYY, h:mm a');
-
-    today.text(getDate);
-
-
 // hello messgae on user page
     function message() {
         var greeting;
@@ -42,4 +35,20 @@ $('#appointmentForm').hide();
 $('#appointmentBtn').click( function(){
     calContent.fadeOut();
     form.fadeIn();
+  });
+
+
+  //Cancel button refresh fullpage
+  var cancel = $('#cancelForm');
+
+  cancel.click(function(){
+    location.reload();
+  });
+
+
+  //submit button form refresh fullpage
+  var submit = $('#submitForm');
+
+  submit.click(function(){
+    location.reload();
   });

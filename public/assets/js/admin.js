@@ -1,4 +1,4 @@
-$(document).ready(function() { 
+$(document).ready(function() {
 	// $(document).on("click", "#app", getAppointments);
 	var appointmentArray = [];
 	var appTime;

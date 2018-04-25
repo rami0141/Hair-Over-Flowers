@@ -32,6 +32,10 @@
   cursor: pointer;
 }
 
+.clndr-previous-button:hover, .clndr-next-button:hover {
+  opacity: 0.3;
+}
+
 .header-day {
     float: none;
     width: 14.2857%;

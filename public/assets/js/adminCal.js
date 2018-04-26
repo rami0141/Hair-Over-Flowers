@@ -6,7 +6,7 @@ $(function() {
  $('#full-clndr').clndr();
 });
 
-// moment.js
+// moment.js ---- this will be added into the admin html dynamically with React
     // var today = $('#today');
     // var getDate = moment().format('MMMM Do YYYY, h:mm a');
     //

@@ -21,6 +21,15 @@ module.exports = function (app) {
         });
     });
 
+    app.get("/api/appointments/:stylist", function (req, res) {
+        console.log("stylist appt")
+         db.Appointment.findAll({ where: { stylist: req.params.stylist } }).then(function (dbAppointment) {
+            // We have access to the todos as an argument inside of the callback function
+            console.log("Found ")
+            res.json(dbAppointment);
+        });
+    });
+
     // app.get("/api/appointments/:id", function (req, res) {
     //     // findAll returns all entries 
     //     console.log(req.params.id);

@@ -51,7 +51,7 @@ $(document).ready(function() {
         $.get("/api/users", function (data) {
             console.log("hello");
 
-            // $("#message").append("<h1>Hello, " + users.name + "</h1>");
+            $("#message").append("<h1>Hello, " + data.stylistName + "</h1>");
             console.log(data);
         });
     }

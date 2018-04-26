@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	// $(document).on("click", "#app", getAppointments);
 	var appointmentArray = [];
 	var appTime;
@@ -6,15 +7,32 @@ $(document).ready(function() {
 	var email;
 	var number;
 	var service;
+    var stylistName;
 
-	$(window).on("load", function getAppointments() {
-	$.get("/api/appointments", function (data) {
+    $(window).on("load", pullStylistInfo);
+   
+    // Pulling User Info from database
+    function pullStylistInfo() {
+        $.get("/api/users", function (data) {
+            console.log("hello");
+            stylistName = data.stylistName;
+            // displays the stylist name in the admin page
+            $("#message").append("<h1>Hello, " + stylistName + "</h1>");
+            getAppointments();
+        });
+    }
+
+    // -----------------------------------------------------------------
+    // Pull Only one stylist appointments
+	function getAppointments() {
+
+	$.get("/api/appointments/" + stylistName, function (data) {
         appointmentArray = data;
-        console.log("Array", appointmentArray);
+       console.log("Array", appointmentArray);
         loopingAppointments(appointmentArray);
        // console.log(appointmentArray[2].name);
     });
-  });
+  };
 
 	// This function will loop through all appointments
     function loopingAppointments(appointmentArray) {
@@ -35,37 +53,8 @@ $(document).ready(function() {
     		$("#service").append("<tr><td>" + service + "</td></tr>");
             // $("#comments").append("<tr><td>" + comments + "</td></tr>");
     		// $("#button").append("<tr><td><button class='btn btn-primary btn-sm delete'>Check-In</button></td></tr>");
-				$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
+			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
     	}
     }// End of loopingAppointments functions
+});  // end of document.ready function
 
-    // Pulling User Info from database
-
-    var stylistUserName;
-    var stylistName;
-
-    $(window).on("load", pullStylistInfo);
-
-    function pullStylistInfo() {
-        // Grabs the username typed in
-        $.get("/api/users", function (data) {
-            console.log("hello");
-
-            $("#message").append("<h1>Hello, " + data.stylistName + "</h1>");
-            console.log(data);
-        });
-    }
-
-    $(document).on("click", "#user", dataPulled);
-
-    function dataPulled() {
-        
-    };
-});
-
-    // click even for the check-in button
-    // $(document).on("click", ".checkIn", deleteAppointment);
-
-    // function deleteAppointment {
-
- // end of document.ready function

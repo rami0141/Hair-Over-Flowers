@@ -7,7 +7,7 @@ $(function() {
 });
 
 // moment.js
-    var today = $('#today');
-    var getDate = moment().format('MMMM Do YYYY, h:mm a');
-
-    today.text(getDate);
+    // var today = $('#today');
+    // var getDate = moment().format('MMMM Do YYYY, h:mm a');
+    //
+    // today.text(getDate);

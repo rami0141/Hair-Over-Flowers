@@ -26,7 +26,6 @@ module.exports = function (passport, user, session) {
 
         function (req, username, password, done) {
         req.session.user = username;
-        console.log(req.session.user)
         User.findOne({ where: { username: username } }).then(function (user) {
 
             if (!user) {

@@ -21,16 +21,16 @@ module.exports = function (app) {
         });
     });
 
-    app.get("/api/appointments/:id", function (req, res) {
-        // findAll returns all entries 
-        console.log(req.params.id);
-        const id = req.params.id;
-        db.Appointment.findOne({ where: { id: id } }).then(function (dbAppointment) {
-            // We have access to the todos as an argument inside of the callback function
-            console.log("Found")
-            res.json(dbAppointment);
-        });
-    });
+    // app.get("/api/appointments/:id", function (req, res) {
+    //     // findAll returns all entries 
+    //     console.log(req.params.id);
+    //     const id = req.params.id;
+    //     db.Appointment.findOne({ where: { id: id } }).then(function (dbAppointment) {
+    //         // We have access to the todos as an argument inside of the callback function
+    //         console.log("Found")
+    //         res.json(dbAppointment);
+    //     });
+    // });
   
     // DELETE route for deleting posts
     app.delete("/api/appointments/:id", function (req, res) {
@@ -42,4 +42,5 @@ module.exports = function (app) {
             res.json(dbAppointment);
         });
     });
+
 };

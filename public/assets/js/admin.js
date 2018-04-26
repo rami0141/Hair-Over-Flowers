@@ -39,10 +39,33 @@ $(document).ready(function() {
     	}
     }// End of loopingAppointments functions
 
+    // Pulling User Info from database
+
+    var stylistUserName;
+    var stylistName;
+
+    $(window).on("load", pullStylistInfo);
+
+    function pullStylistInfo() {
+        // Grabs the username typed in
+        $.get("/api/users", function (data) {
+            console.log("hello");
+
+            // $("#message").append("<h1>Hello, " + users.name + "</h1>");
+            console.log(data);
+        });
+    }
+
+    $(document).on("click", "#user", dataPulled);
+
+    function dataPulled() {
+        
+    };
+});
+
     // click even for the check-in button
     // $(document).on("click", ".checkIn", deleteAppointment);
 
     // function deleteAppointment {
 
-    // }
-}); // end of document.ready function
+ // end of document.ready function

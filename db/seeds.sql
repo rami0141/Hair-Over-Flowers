@@ -20,10 +20,11 @@ USE scheduler_db;
 
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR(30)NOT NULL,
   username VARCHAR(30)NOT NULL,
   password VARCHAR(30)NOT NULL,
+  stylistName VARCHAR(50)NOT NULL,
   createdAt datetime DEFAULT NULL,  
   updatedAt datetime DEFAULT NULL,  
   PRIMARY KEY (id)
 )
+

@@ -1,4 +1,4 @@
-module.exports = function (passport, user) {
+module.exports = function (passport, user, session) {
     var LocalStrategy = require('passport-local').Strategy;
     var User = user;
 
@@ -22,9 +22,11 @@ module.exports = function (passport, user) {
 
     passport.use('signin', new LocalStrategy(
         { passReqToCallback: true },
+        
 
         function (req, username, password, done) {
-
+        req.session.user = username;
+        console.log(req.session.user)
         User.findOne({ where: { username: username } }).then(function (user) {
 
             if (!user) {

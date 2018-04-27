@@ -1,7 +1,7 @@
 
 # Hair Over Flowers
 
-![My image](public/assets/images/hairoverflowers.PNG)
+![alt text](public/assets/images/hairoverflowers.PNG)
 
 Hairs Over Flowers is a hair salon appointment setter application. The app consists of both a user and an admin side. On the user side, the app displays a calendar with open time slots for hair appointment. The users can click on the available slots and enter in their contact information to make an appointment. On the admin side, the owner can login into it with his/her login info to view all customer appointments. 
 

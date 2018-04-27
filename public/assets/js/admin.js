@@ -12,14 +12,14 @@ $(document).ready(function() {
     var stylistName;
 
     $(window).on("load", pullStylistInfo);
-   
+
     // Pulling User Info from database
     function pullStylistInfo() {
         $.get("/api/users", function (data) {
             console.log("hello");
             stylistName = data.stylistName;
             // displays the stylist name in the admin page
-            $("#message").append("<h1>Hello, " + stylistName + "</h1>");
+            $("#message").append("<h1>Hello " + stylistName + "!</h1>");
             getAppointments();
         });
     }
@@ -90,4 +90,3 @@ $(document).ready(function() {
 
 });  // end of document.ready function
 
-   

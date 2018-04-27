@@ -50,6 +50,7 @@ $(document).ready(function() {
         .val()
     };
     console.log(newAppointment);
+    console.log(newAppointment.month);
 
     // Will send data to the database
     $.post("/api/appointments", newAppointment).done(function (data) {

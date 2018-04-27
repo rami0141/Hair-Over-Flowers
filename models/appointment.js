@@ -6,8 +6,8 @@
         phone: { type: DataTypes.STRING },
         email: { type: DataTypes.STRING },
         service: { type: DataTypes.STRING },
-        appMonth: { type: DataTypes.STRING, allowNull: false },
-        appDay: { type: DataTypes.INTEGER, allowNull: false },
+        appMonth: { type: DataTypes.STRING  },
+        appDay: { type: DataTypes.STRING },
         appTime: { type: DataTypes.STRING, allowNull: false },
         stylist: { type: DataTypes.STRING, allowNull: false },
         comments: { type: DataTypes.STRING, allowNull: false }

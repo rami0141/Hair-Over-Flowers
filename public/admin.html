@@ -116,21 +116,35 @@
     <script src="assets/js/admin.js"></script>
 
     <script type="text/babel">
+      const today = moment();
       const ExampleApplication = React.createClass({
+        state: { elapsed: 0 },
+
+        componentDidMount: function() {
+          setTimeout(function() {
+            const now = Date.now();
+
+            this.setState({ elapsed: now });
+          }, 50);
+        },
+
         render: function() {
           const elapsed = Math.round(this.props.elapsed  / 100);
           const seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
           const message = 'React has been successfully running for ' + seconds + ' seconds.';
-          return <p>{message}</p>;
+          return (
+            <p>{this.props.today.format('MMM Do YYYY h:mm:ss a')}</p>
+          );
         }
       });
       const start = new Date().getTime();
-      setInterval(function() {
-        ReactDOM.render(
-          <ExampleApplication elapsed={new Date().getTime() - start} />,
-          document.getElementById('today')
-        );
-      }, 50);
+      ReactDOM.render(
+        <ExampleApplication
+          today={today}
+          elapsed={new Date().getTime() - start}
+        />,
+        document.getElementById('today')
+      );
     </script>
   </body>
 </html>

@@ -60,16 +60,21 @@
         <table class="table whiteBG">
       <thead>
     <tr>
-      <th scope="col" id="time"><h4 class="fancy-text">Time</h4></th>
-      <th scope="col" id="name"><h4 class="fancy-text">Name</h4></th>
+      <th scope="col"><h4 class="fancy-text">Time</h4></th>
+      <th scope="col"><h4 class="fancy-text">Name</h4></th>
       <!-- <th scope="col" id="email">Email</th> -->
-      <th scope="col" id="number"><h4 class="fancy-text">Phone Number</h4></th>
-      <th scope="col" id="service"><h4 class="fancy-text">Service</h4></th>
+      <th scope="col"><h4 class="fancy-text">Phone Number</h4></th>
+      <th scope="col"><h4 class="fancy-text">Service</h4></th>
       <!-- <th scope="col" id="comments">Check in</th> -->
-      <th scope="col" id="button" class="checkIn"><h4 class="fancy-text">Check in</h4></th>
+      <th scope="col"><h4 class="fancy-text">Check in</h4></th>
     </tr>
   </thead>
  <tbody>
+    <td  id="time"></td>
+    <td id="name"></td>
+    <td id="number"></td>
+    <td id="service"></td>
+    <td id="button"></td>
     <!-- Dynamic display of appointment for the day -->
   </tbody>
 </table>
@@ -84,12 +89,43 @@
             <div id="full-clndr">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4">              
+            <!-- Select a month and display appointments section -->
+            <select>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
 
-          </div>
+          <!-- Dynamic Monthly Appointment Table -->
+          <table class="table whiteBG mt-5">
+            <thead>
+            <tr>
+              <th scope="col"><h4 class="fancy-text">Date</h4></th>
+              <th scope="col"><h4 class="fancy-text">Name</h4></th>
+              <th scope="col"><h4 class="fancy-text">Time</h4></th>              
+            </tr>
+          </thead>
+         <tbody>
+          <tr id="clear" class="month">
+            <td  id="month"></td>
+            <td id="monTime"></td>
+            <td id="monName"></td>
+          </tr>
+          </tbody>
+        </table>
         </div>
       </div>
-    </div>
+
 
 
     <!-- jquery -->
@@ -132,7 +168,7 @@
 
         render: function() {
           const elapsed = Math.round(this.props.elapsed  / 100);
-          const seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
+          const seconds = elapsed / 10 + (elapsed % 10 ? '' : ' -->.0' );
           const message = 'React has been successfully running for ' + seconds + ' seconds.';
           return (
             <p>{this.props.today.format('MMM Do YYYY h:mm:ss a')}</p>

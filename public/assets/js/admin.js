@@ -70,12 +70,12 @@ $(document).ready(function() {
         $("#month").empty();
         $("#monTime").empty();
         $("#monName").empty();
-        monthSelected = this.value; 
+        monthSelected = this.value;
 
         for (var i = 0; i < appointmentArray.length; i++) {
             if (appointmentArray[i].appMonth == monthSelected) {
                 newArr.push(appointmentArray[i]);
-            
+
                 appMonth = appointmentArray[i].appMonth;
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;
@@ -84,9 +84,8 @@ $(document).ready(function() {
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td><td>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
-            }    
-        }      
+            }
+        }
     });
 
 });  // end of document.ready function
-

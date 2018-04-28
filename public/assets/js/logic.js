@@ -46,9 +46,12 @@ $('#appointmentBtn').click( function(){
   });
 
 
-  //submit button form refresh fullpage
-  // var submit = $('#submitForm');
+  // submit button form refresh fullpage
+  var submit = $('#submitForm');
 
-  // submit.click(function(){
-  //   location.reload();
-  // });
+  submit.click(function(){
+    location.reload();
+
+    // Temp message until we get the emailer running
+    alert("Appointment Received, Thank you!");
+  });

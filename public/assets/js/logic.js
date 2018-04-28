@@ -51,7 +51,14 @@ $('#appointmentBtn').click( function(){
 
   submit.click(function(){
     location.reload();
-
     // Temp message until we get the emailer running
     alert("Appointment Received, Thank you!");
   });
+
+  //phone form 000-000-0000
+//   $('form').on('submit', function(){
+//
+//     $(this).find('input[name="number"]').each(function(){
+//         $(this).val() = $(this).val().replace(/-/g, '');
+//     });
+// });

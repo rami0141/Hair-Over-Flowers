@@ -46,7 +46,9 @@ $('#appointmentBtn').click( function(){
   });
 
 
-  // submit button form refresh fullpage
+
+  //submit button form refresh fullpage
+
   var submit = $('#submitForm');
 
   submit.click(function(){
@@ -62,3 +64,4 @@ $('#appointmentBtn').click( function(){
 //         $(this).val() = $(this).val().replace(/-/g, '');
 //     });
 // });
+

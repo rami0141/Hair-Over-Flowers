@@ -94,22 +94,22 @@ $(document).ready(function() {
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
-
-                $("#deleteApp").append("<tr><td><button type='button' class='btn btn-light' id='deletethisshit'>Delete</button></td></tr>");
-
+                $("#deleteApp").append("<tr><td><button type='button' class='btn btn-primary' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
             }    
         }      
     });
 
     // Function for handling what happens when the delete button is pressed
-    // $(document).on("click",".deletethisshit", function() { 
-    //     console.log("Hello");
-    //     // $.ajax({
-    //     //   method: "DELETE",
-    //     //   url: "/api/appointments/" + id
-    //     // })
-        
-    //   });
+    $(document).on("click", "#deleteAppointment", function() { 
+        console.log("Hello" + this.value);
+        id = this.value;
+        console.log(id);
+        $.ajax({
+          method: "DELETE",
+          url: "/api/appointments/" + id
+        })
+        console.log("This appointment ID has been deleted", id);
+      });
 
     }); // end of document.ready function
 

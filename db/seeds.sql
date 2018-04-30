@@ -31,13 +31,13 @@ CREATE TABLE users (
 
 USE scheduler_db;
 
-INSERT INTO appointments (name, phone, email, service, appMonth, appDay, appTime, stylist, comments)
-VALUES ("Jon Snow", "612-846-7895", "jon@northernmail.com", "Shampooing", "4", "31", "11:00am", "Mika Tan","I have not washed my hair since winter started." );
-VALUES ("Mia Zhang", "415-227-8469", "mia@umn.edu", "Coloring", "4", "31", "1:00pm", "Roslina Jung", "I want my hair red!" );
-VALUES ("Steve Aoki", "548-879-6644", "aoki@cooldjs.com", "Styling", "5", "1", "1:00pm", "Roslina Jung", "I need to look for my show." );
-VALUES ("Selina Santana", "514-879-4897", "selina@gmail", "Styling", "5", "1", "9:00am", "Mika Tan", "My milkshake brings all the boys to the yard" );
-VALUES ("Jessica Jones", "444-876-4578", "jessica@yahoo.com", "Brazilian Blowout", "5", "2", "4:00pm", "Mika Tan", "My hair is super curly and I hate it." );
-VALUES ("Barack Obama", "763-885-1354", "obama@presidents.com", "Haircut", "5", "2", "12:00pm", "Roslina Jung", "Need to look sharp." );
-VALUES ("Jorge Ramos", "227-875-4687", "ramos@univision.com", "Styling", "5", "3", "9:00am", "Roslina Jung", "anything to look good" );
-VALUES ("Mushu", "763-487-4868", "mushu@dogs.com", "Haircut", "5", "3", "4:00pm", "Mika Tan", "I am scruffy" );
-VALUES ("Li Zhang", "763-785-6795", "lizhang@yahoo.com", "Extensions", "5", "4", "6:00pm", "Mika Tan", "I want longer hair" );
+INSERT INTO appointments (name, phone, email, service, appMonth, appDay, appTime, stylist, comments,  createdAt, updatedAt)
+VALUES ("Jon Snow", "612-846-7895", "jon@northernmail.com", "Shampooing", "4", "31", "11:00am", "Mika Tan","I have not washed my hair since winter started.", "2018-04-24", "2018-04-24");
+VALUES ("Mia Zhang", "415-227-8469", "mia@umn.edu", "Coloring", "4", "31", "1:00pm", "Roslina Jung", "I want my hair red!", "2018-04-24", "2018-04-24");
+VALUES ("Steve Aoki", "548-879-6644", "aoki@cooldjs.com", "Styling", "5", "1", "1:00pm", "Roslina Jung", "I need to look for my show.", "2018-04-24", "2018-04-24");
+VALUES ("Selina Santana", "514-879-4897", "selina@gmail", "Styling", "5", "1", "9:00am", "Mika Tan", "My milkshake brings all the boys to the yard", "2018-04-24", "2018-04-24");
+VALUES ("Jessica Jones", "444-876-4578", "jessica@yahoo.com", "Brazilian Blowout", "5", "2", "4:00pm", "Mika Tan", "My hair is super curly and I hate it.", "2018-04-24", "2018-04-24");
+VALUES ("Barack Obama", "763-885-1354", "obama@presidents.com", "Haircut", "5", "2", "12:00pm", "Roslina Jung", "Need to look sharp.", "2018-04-24", "2018-04-24");
+VALUES ("Jorge Ramos", "227-875-4687", "ramos@univision.com", "Styling", "5", "3", "9:00am", "Roslina Jung", "anything to look good", "2018-04-24", "2018-04-24");
+VALUES ("Mushu", "763-487-4868", "mushu@dogs.com", "Haircut", "5", "3", "4:00pm", "Mika Tan", "I am scruffy", "2018-04-24", "2018-04-24");
+VALUES ("Li Zhang", "763-785-6795", "lizhang@yahoo.com", "Extensions", "5", "4", "6:00pm", "Mika Tan", "I want longer hair", "2018-04-24", "2018-04-24");

@@ -77,15 +77,14 @@ $(document).ready(function() {
         $("#month").empty();
         $("#monTime").empty();
         $("#monName").empty();
+        $("#deleteApp").empty();
         monthSelected = this.value;
 
         for (var i = 0; i < appointmentArray.length; i++) {
             if (appointmentArray[i].appMonth == monthSelected) {
                 newArr.push(appointmentArray[i]);
-
             
                 var I_D = appointmentArray[i].id;
-
                 appMonth = appointmentArray[i].appMonth;
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;

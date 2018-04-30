@@ -47,8 +47,8 @@ $('#appointmentBtn').click( function(){
 
 
   //submit button form refresh fullpage
-  // var submit = $('#submitForm');
+  var submit = $('#submitForm');
 
-  // submit.click(function(){
-  //   location.reload();
-  // });
+  submit.click(function(){
+    location.reload();
+  });

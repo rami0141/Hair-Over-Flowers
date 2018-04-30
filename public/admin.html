@@ -35,7 +35,6 @@
         </ul>
         <form action='/signout' method='GET'>
           <button class="btn btn-outline-light" type="submit">Sign out</button>
-          <button class="btn" id="user" type="button">user</button>
         </form>
       </div>
     </nav>
@@ -81,6 +80,80 @@
       </div>
     </div>
     </div>
+    
+    <!-- Delete Appt Section -->
+    <div class="section">
+    <div class="container">
+      <form id="resetForm">
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+        </div>
+        <div class="form-row">
+                          <div class="form-group col-md-4">
+                          <label for="inputState">Appointment Month</label>
+                            <select id="appMonth" class="form-control" required>
+                              <option disabled selected>Month</option>
+                              <option value="1">January</option>
+                              <option value="2">February</option>
+                              <option value="3">March</option>
+                              <option value="4">April</option>
+                              <option value="5">May</option>
+                              <option value="6">June</option>
+                              <option value="7">July</option>
+                              <option value="8">August</option>
+                              <option value="9">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                        <label for="inputState">Appointment Day</label>
+                            <select id="appDay" class="form-control" required>
+                              <option disabled selected>Day</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                              <option>21</option>
+                              <option>22</option>
+                              <option>23</option>
+                              <option>24</option>
+                              <option>25</option>
+                              <option>26</option>
+                              <option>27</option>
+                              <option>28</option>
+                              <option>29</option>
+                              <option>30</option>
+                              <option>31</option>
+                            </select>
+                          </div>
+                        <button type="submit" id="delete" class="btn btn-primary">Delete</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+
+
+
 
     <div id="schedule" class="container section">
         <div class="row">
@@ -112,7 +185,8 @@
             <tr>
               <th scope="col"><h4 class="fancy-text">Date</h4></th>
               <th scope="col"><h4 class="fancy-text">Name</h4></th>
-              <th scope="col"><h4 class="fancy-text">Time</h4></th>              
+              <th scope="col"><h4 class="fancy-text">Time</h4></th>
+              <th scope="col"><h4 class="fancy-text">Delete</h4></th>               
             </tr>
           </thead>
          <tbody>
@@ -120,12 +194,13 @@
             <td  id="month"></td>
             <td id="monTime"></td>
             <td id="monName"></td>
+            <td id="deleteApp"></td>
           </tr>
           </tbody>
-        </table>
-        </div>
+        </table>    
       </div>
-
+    </div>
+  </div>
 
 
     <!-- jquery -->

@@ -77,13 +77,15 @@ $(document).ready(function() {
         $("#month").empty();
         $("#monTime").empty();
         $("#monName").empty();
-        monthSelected = this.value; 
+        monthSelected = this.value;
 
         for (var i = 0; i < appointmentArray.length; i++) {
             if (appointmentArray[i].appMonth == monthSelected) {
                 newArr.push(appointmentArray[i]);
+
             
                 var I_D = appointmentArray[i].id;
+
                 appMonth = appointmentArray[i].appMonth;
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;
@@ -93,6 +95,7 @@ $(document).ready(function() {
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
+
                 $("#deleteApp").append("<tr><td><button type='button' class='btn btn-light' id='deletethisshit'>Delete</button></td></tr>");
 
             }    
@@ -110,4 +113,5 @@ $(document).ready(function() {
     //   });
 
     }); // end of document.ready function
+
 

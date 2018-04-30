@@ -138,3 +138,7 @@ background-color: #c4f3d3;
 #stylists h3 {
   color:  #c4f3d3;
 }
+
+#reactTime span {
+  margin: .25em;
+}

@@ -57,7 +57,7 @@ $(document).ready(function() {
             if (appointmentArray[i].appDay == dd && appointmentArray[i].appMonth == mm) {
                 todayArr.push(appointmentArray[i]);
                 console.log(todayArr)
-            
+
                 // dynamically creates table - The comments section is commented out
         		$("#time").append("<tr><td>" + appTime + "</td></tr>");
         		$("#name").append("<tr><td>" + name+ "</td></tr>");
@@ -65,8 +65,8 @@ $(document).ready(function() {
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
                 // $("#comments").append("<tr><td>" + comments + "</td></tr>");
-        		//$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
-    			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
+        		$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
+    			// $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
     	   }
         }
     }// End of loopingAppointments functions
@@ -83,7 +83,7 @@ $(document).ready(function() {
         for (var i = 0; i < appointmentArray.length; i++) {
             if (appointmentArray[i].appMonth == monthSelected) {
                 newArr.push(appointmentArray[i]);
-            
+
                 var I_D = appointmentArray[i].id;
                 appMonth = appointmentArray[i].appMonth;
                 appDay = appointmentArray[i].appDay;
@@ -94,13 +94,13 @@ $(document).ready(function() {
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
-                $("#deleteApp").append("<tr><td><button type='button' class='btn btn-primary' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
-            }    
-        }      
+                $("#deleteApp").append("<tr><td><button type='button' class='btn btn-danger btn-sm' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
+            }
+        }
     });
 
     // Function for handling what happens when the delete button is pressed
-    $(document).on("click", "#deleteAppointment", function() { 
+    $(document).on("click", "#deleteAppointment", function() {
         console.log("Hello" + this.value);
         id = this.value;
         console.log(id);
@@ -112,5 +112,3 @@ $(document).ready(function() {
       });
 
     }); // end of document.ready function
-
-

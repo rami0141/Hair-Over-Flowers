@@ -2,29 +2,28 @@
   width: 85%;
   font-family: 'Abril Fatface', cursive;
   font-size: 1.5em;
-  -moz-box-shadow: 0px 4px 0 darken(black, 5%);
-  -webkit-box-shadow: 0px 4px 0 darken(black, 5%);
-  box-shadow: 0px 4px 0 darken(black, 5%);
+  padding-bottom: .5em;
 }
 
 .clndr-controls {
   padding: 0 .25em .25em .5em;
   color: black;
   text-align: center;
+  font-size: 1.25em;
 }
 
 .clndr-previous-button {
-  float: left;
-  text-align: left;
+  margin: 1em;
   color: black;
-  font-size: .75em;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .clndr-next-button {
-  float: right;
-  text-align: right;
+  margin: 1em;
   color: black;
-  font-size: .75em;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .clndr-previous-button, .clndr-next-button {

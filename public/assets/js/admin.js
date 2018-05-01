@@ -21,7 +21,7 @@ $(document).ready(function() {
         $.get("/api/users", function (data) {
             stylistName = data.stylistName;
             // displays the stylist name in the admin page
-            $("#message").append("<h1>Hello " + stylistName + "!</h1>");
+            $("#message").append("Hello " + stylistName + "!");
             getAppointments();
         });
     }

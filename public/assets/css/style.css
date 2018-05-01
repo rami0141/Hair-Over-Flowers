@@ -4,9 +4,12 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
+.table td {
+  border-top: none !important;
+}
+
 .fancy-text {
   font-family: 'Abril Fatface', cursive;
-  padding: .5em;
 }
 
 .padded {
@@ -141,4 +144,8 @@ background-color: #c4f3d3;
 
 #reactTime span {
   margin: .25em;
+}
+
+#deleteApp button, #month, #monTime, #monName {
+  margin: -1em;
 }

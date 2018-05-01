@@ -50,7 +50,7 @@
     <!-- Appointments -->
 
     <div id="appointments" class="section">
-      <div class="container">
+      <div class="container-fluid">
       <h2 id="today" class="text-center"></h2>
       <br>
 
@@ -80,15 +80,17 @@
       </div>
     </div>
     </div>
-  
-    <div id="schedule" class="container section">
+
+    <div id="schedule" class="container-fluid section">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <!-- calendar -->
             <div id="full-clndr">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
             <!-- Select a month and display appointments section -->
             <select>
               <option value="1">January</option>
@@ -109,10 +111,10 @@
           <table class="table whiteBG mt-5">
             <thead>
             <tr>
-              <th scope="col"><h4 class="fancy-text">Date</h4></th>
-              <th scope="col"><h4 class="fancy-text">Time</h4></th>
-              <th scope="col"><h4 class="fancy-text">Name</h4></th>
-              <th scope="col"><h4 class="fancy-text">Delete</h4></th>               
+              <th scope="col"><h5 class="fancy-text">Date</h5></th>
+              <th scope="col"><h5 class="fancy-text">Time</h5></th>
+              <th scope="col"><h5 class="fancy-text">Name</h5></th>
+              <th scope="col"><h5 class="fancy-text">Edit</h5></th>
 
             </tr>
           </thead>
@@ -124,9 +126,11 @@
             <td id="deleteApp"></td>
           </tr>
           </tbody>
-        </table>    
+        </table>
+      </div>
       </div>
     </div>
+  </div>
   </div>
 
 
@@ -173,7 +177,7 @@
         );
       }
       setInterval(tick, 1000);
-      
+
     </script>
   </body>
 </html>

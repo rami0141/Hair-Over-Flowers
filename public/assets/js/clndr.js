@@ -42,7 +42,7 @@
     var clndrTemplate =
         "<div class='clndr-controls'>" +
             // "<div class='clndr-control-button'>" +
-                "<span class='clndr-previous-button'>previous</span>" +
+                "<span class='clndr-previous-button'>prev</span>" +
             // "</div>" +
             "<span class='month'><%= month %> <%= year %></span>" +
             // "<div class='clndr-control-button rightalign'>" +

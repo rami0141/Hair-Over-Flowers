@@ -47,7 +47,7 @@ $(document).ready(function() {
     		email = appointmentArray[i].email;
     		number = appointmentArray[i].phone;
     		service = appointmentArray[i].service;
-            comments = appointmentArray[i].comments;
+        comments = appointmentArray[i].comments;
 
             var today = new Date();
             var dd = today.getDate();
@@ -60,16 +60,17 @@ $(document).ready(function() {
 
                 // dynamically creates table - The comments section is commented out
         		$("#time").append("<tr><td>" + appTime + "</td></tr>");
-        		$("#name").append("<tr><td>" + name+ "</td></tr>");
+        		$("#name").append("<tr><td><i class='fas fa-comment fa-lg' data-toggle='popover' title='Comment' data-content='And here is some amazing content. It is very engaging. Right?'></i> " + name+ "</td></tr>");
         		// $("#email").append("<tr><td>" + email + "</td></tr>");
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
-                // $("#comments").append("<tr><td>" + comments + "</td></tr>");
         		$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
     			// $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
     	   }
         }
     }// End of loopingAppointments functions
+
+
 
 
     //Show appointments by month for each stylist
@@ -110,5 +111,6 @@ $(document).ready(function() {
         })
         console.log("This appointment ID has been deleted", id);
       });
+
 
     }); // end of document.ready function

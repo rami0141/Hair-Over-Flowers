@@ -25,6 +25,10 @@ h1, h2, h3 {
    color: white;
  }
 
+ .fa-comment {
+   color: black;
+ }
+
 /* --------------Scroll Style------------- */
 
 .scroll {

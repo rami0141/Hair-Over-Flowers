@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Google Font Abril -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- fullpage.js -->
     <link rel="stylesheet" href="assets/css/jquery.fullpage.min.css">
     <!-- cldnr css -->
@@ -50,7 +52,7 @@
     <!-- Appointments -->
 
     <div id="appointments" class="section">
-      <div class="container">
+      <div class="container-fluid">
       <h2 id="today" class="text-center"></h2>
       <br>
 
@@ -64,7 +66,9 @@
       <!-- <th scope="col" id="email">Email</th> -->
       <th scope="col"><h4 class="fancy-text">Phone</h4></th>
       <th scope="col"><h4 class="fancy-text">Service</h4></th>
+
       <th scope="col"><h4 class="fancy-text">Comments</h4></th>
+
       <th scope="col"><h4 class="fancy-text">Check in</h4></th>
     </tr>
   </thead>
@@ -81,15 +85,17 @@
       </div>
     </div>
     </div>
-  
-    <div id="schedule" class="container section">
+
+    <div id="schedule" class="container-fluid section">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <!-- calendar -->
             <div id="full-clndr">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body scroll">
             <!-- Select a month and display appointments section -->
             <select>
               <option value="1">January</option>
@@ -110,13 +116,14 @@
           <table class="table whiteBG mt-5">
             <thead>
             <tr>
-              <th scope="col"><h4 class="fancy-text">Date</h4></th>
-              <th scope="col"><h4 class="fancy-text">Time</h4></th>
-              <th scope="col"><h4 class="fancy-text">Name</h4></th>
-              <th scope="col"><h4 class="fancy-text">Delete</h4></th>               
+              <th scope="col"><h5 class="fancy-text">Date</h5></th>
+              <th scope="col"><h5 class="fancy-text">Time</h5></th>
+              <th scope="col"><h5 class="fancy-text">Name</h5></th>
+              <th scope="col"><h5 class="fancy-text">Edit</h5></th>
 
             </tr>
           </thead>
+
          <tbody>
           <tr id="clear" class="month">
             <td  id="month"></td>
@@ -125,20 +132,23 @@
             <td id="deleteApp"></td>
           </tr>
           </tbody>
-        </table>    
+
+        </table>
+      </div>
       </div>
     </div>
+  </div>
   </div>
 
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
     <!-- React to HTML -->
-
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <!-- babel -->
@@ -155,6 +165,13 @@
     <!-- Logic -->
     <script src="assets/js/adminCal.js"></script>
     <script src="assets/js/admin.js"></script>
+
+    <script>
+    //pop over function
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      });
+    </script>
 
     <!-- REACT COMPONENT -->
     <script type="text/babel">
@@ -174,7 +191,7 @@
         );
       }
       setInterval(tick, 1000);
-      
+
     </script>
   </body>
 </html>

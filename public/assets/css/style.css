@@ -117,7 +117,7 @@ nav a:hover {
 
 #message {
   font-family: 'Abril Fatface', cursive;
-  font-size: 4em;
+  font-size: 3em;
   color: black;
 }
 
@@ -192,4 +192,9 @@ background-color: #c4f3d3;
 
 #deleteApp button, #month, #monTime, #monName, #button button {
   margin: -1em;
+}
+
+#showImageHere img {
+  border: 15px solid black;
+   border-radius: 100%;
 }

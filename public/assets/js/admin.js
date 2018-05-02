@@ -29,7 +29,7 @@ $(document).ready(function() {
             var stylistContainer = document.getElementById('showImageHere');
             var img1 = document.createElement('img');
             $(img1).addClass("stylistImage");
-
+            
             if (stylistName == "Mika Tan") {
                 console.log("This is Mika")
                 img1.src = "assets/images/stylist1.png";

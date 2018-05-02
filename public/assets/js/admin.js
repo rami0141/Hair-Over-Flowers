@@ -15,7 +15,6 @@ $(document).ready(function() {
     var todayArr = [];
 
     $(window).on("load", pullStylistInfo);
-
     // Pulling User Info from database
     function pullStylistInfo() {
         $.get("/api/users", function (data) {
@@ -26,8 +25,9 @@ $(document).ready(function() {
             getAppointments();
             displayImage();
            });
-    } 
+    }
 
+    // ----------------------------------------------------------------
     // Displays Stylist Image Dynamically
     function displayImage() {
         //console.log(stylistName)
@@ -52,11 +52,24 @@ $(document).ready(function() {
     function getAppointments() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
-           // console.log("Array", appointmentArray);
-            loopingAppointments(appointmentArray);
-           // console.log(appointmentArray[2].name);
+           sortAppointmentsByTime();
         });
       };
+    // ---------------------------------------------------------------
+    //This function will sort the appointments by time
+    function sortAppointmentsByTime() {
+        console.log(appointmentArray);
+         function compare(a, b) {
+            if (a.appTime > b.appTime)
+                return 1;
+            if (a.appTime < b.appTime)
+                return -1
+            return 0;
+        }
+        appointmentArray.sort(compare);
+        appointmentArray.sort(function (a, b) { return (b.appTime > a.appTime) ? 1 : (a.appTime > b.appTime) ? -1 : 0 });
+        loopingAppointments(appointmentArray);
+    }
 
     // ----------------------------------------------------------------
     // This function will loop through all appointments and display only the appointments with todays date
@@ -99,21 +112,32 @@ $(document).ready(function() {
                });
            }
         }
-    // });// End of loopingAppointments functions
 
     // -------------------------------------------------------------------
-    //Show appointments by month for each stylist
-    $('select').on('change', function(){
-    //     appointmentsByMonth(monthSelected);
-    //     console.log(monthSelected)
-    // });
+    // Pulls appointments for stylist
+    function getAppointmentstwo() {
+        $.get("/api/appointments/" + stylistName, function (data) {
+            appointmentArray = data;
+            appointmentsByMonth(monthSelected);
+        });
+      };
 
-    // function appointmentsByMonth(monthSelected) {
+    // ------------------------------------------------------------------
+    //Show appointments by month for each stylist
+    $('select').on('change', getValue); 
+    
+    function getValue() {
+        monthSelected = this.value;
+        appointmentsByMonth(monthSelected);
+        console.log(monthSelected)
+    };
+
+   function appointmentsByMonth(monthSelected) {
         $("#month").empty();
         $("#monTime").empty();
         $("#monName").empty();
-        $("#deleteApp").empty();
-        monthSelected = this.value;
+        $("#deleteApp").empty();     
+        console.log("stylist", stylistName)
 
         for (var i = 0; i < appointmentArray.length; i++) {
             if (appointmentArray[i].appMonth == monthSelected) {
@@ -132,12 +156,13 @@ $(document).ready(function() {
                 $("#deleteApp").append("<tr><td><button type='button' class='btn btn-danger btn-sm popoover'" + i + "'' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
             }
         }
-    });
+    };
 
     // --------------------------------------------------------------------
     // Function for handling what happens when the delete button is pressed
-    $(document).on("click", "#deleteAppointment", function() {
+    $(document).on("click", "#deleteAppointment", deleteAppointmentHere); 
 
+    function deleteAppointmentHere() {
         console.log("Hello" + this.value);
         id = this.value;
         console.log(id);
@@ -145,8 +170,8 @@ $(document).ready(function() {
         $.ajax({
           method: "DELETE",
           url: "/api/appointments/" + id
-        }).done(function(){
-            appointmentsByMonth(monthSelected);
+         }).done(function(){
+            getAppointmentstwo();
         });
-    });
+    } 
  });// end of document.ready function

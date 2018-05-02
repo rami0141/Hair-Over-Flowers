@@ -56,7 +56,6 @@ $(document).ready(function() {
             //if appointment day is equal to todays date, then it will display
             if (appointmentArray[i].appDay == dd && appointmentArray[i].appMonth == mm) {
                 todayArr.push(appointmentArray[i]);
-                console.log(todayArr)
 
                 // dynamically creates table - The comments section is commented out
         		$("#time").append("<tr><td>" + appTime + "</td></tr>");
@@ -64,8 +63,11 @@ $(document).ready(function() {
         		// $("#email").append("<tr><td>" + email + "</td></tr>");
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
-        		$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
-    			// $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
+
+                $("#comments").append("<tr><td>" + comments + "</td></tr>");
+        		//$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
+    			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
+
     	   }
         }
     }// End of loopingAppointments functions
@@ -90,7 +92,6 @@ $(document).ready(function() {
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;
                 name = appointmentArray[i].name;
-                console.log(I_D);
 
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
@@ -109,7 +110,6 @@ $(document).ready(function() {
           method: "DELETE",
           url: "/api/appointments/" + id
         })
-        console.log("This appointment ID has been deleted", id);
       });
 
 

@@ -29,23 +29,21 @@ $(document).ready(function() {
            });
     } 
 
+    function displayImage() {
+        // Displays Stylist Image Dynamically
+        var stylistContainer = document.getElementById('showImageHere');
+        var img1 = document.createElement('img');
+           $(img1).addClass("stylistImage");
 
-             function displayImage() {
-            // Displays Stylist Image Dynamically
-            var stylistContainer = document.getElementById('showImageHere');
-            var img1 = document.createElement('img');
-            $(img1).addClass("stylistImage");
+        if (stylistName == "Mika Tan") {
+            console.log("This is Mika")
+            img1.src = "assets/images/stylist1.png";
+        }
+        else {
+            img1.src = "assets/images/stylist2.png";
+        }
 
-            if (stylistName == "Mika Tan") {
-                console.log("This is Mika")
-                img1.src = "assets/images/stylist1.png";
-            }
-            else {
-                img1.src = "assets/images/stylist2.png";
-            }
-
-            stylistContainer.appendChild(img1);
-
+        stylistContainer.appendChild(img1);
     }
 
     // Displays Stylist Image Dynamically
@@ -89,7 +87,7 @@ $(document).ready(function() {
     		email = appointmentArray[i].email;
     		number = appointmentArray[i].phone;
     		service = appointmentArray[i].service;
-        comments = appointmentArray[i].comments;
+            comments = appointmentArray[i].comments;
 
             var today = new Date();
             var dd = today.getDate();
@@ -98,51 +96,37 @@ $(document).ready(function() {
             //if appointment day is equal to todays date, then it will display
             if (appointmentArray[i].appDay == dd && appointmentArray[i].appMonth == mm) {
                 todayArr.push(appointmentArray[i]);
-
                 // dynamically creates table - The comments section is commented out
         		$("#time").append("<tr><td>" + appTime + "</td></tr>");
-
         		$("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
 
-
-        		$("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
+        		//$("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
 
 
         		// $("#email").append("<tr><td>" + email + "</td></tr>");
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
 
-          // $("#comments").append("<h2>Appointment: "+appTime+"</h2><div class='row'><div class='col'>"+name+"<div class='col'>"+email+"<div class='col'>"+service+"<div class='commentStyle'>"+comments+"</div></div></div></div></div>");
+               // $("#comments").append("<h2>Appointment: "+appTime+"</h2><div class='row'><div class='col'>"+name+"<div class='col'>"+email+"<div class='col'>"+service+"<div class='commentStyle'>"+comments+"</div></div></div></div></div>");
         		//$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
-    			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
-
-    	   
+    			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");    	   
            }
+			       // comment modal function
+			       $('#comments').hide();
+			       $("#pop" + i).click(function(){
+			       $('#appSection').fadeOut();
+			       $('#comments').fadeIn();
+		        });
 
-
-					// comment modal function
-					$('#comments').hide();
-					$("#pop" + i).click(function(){
-						$('#appSection').fadeOut();
-						$('#comments').fadeIn();
-					});
-
-					$('#x').click(function(){
-						$('#appSection').fadeIn();
-						$('#comments').fadeOut();
-					});
-
+			       $('#x').click(function(){
+			       $('#appSection').fadeIn();
+			       $('#comments').fadeOut();
+			   });
     	   }
         }
-    }// End of loopingAppointments functions
-
-
-
-
+    });// End of loopingAppointments functions
 
     // -------------------------------------------------------------------
-
-
     //Show appointments by month for each stylist
     $('select').on('change', function(){
         monthSelected = this.value;
@@ -190,4 +174,4 @@ $(document).ready(function() {
             appointmentsByMonth(monthSelected);
         });
     });
-}); // end of document.ready function
+ // end of document.ready function

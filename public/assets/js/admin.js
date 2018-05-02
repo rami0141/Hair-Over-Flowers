@@ -24,10 +24,13 @@ $(document).ready(function() {
             $("#message").append("Hello " + stylistName + "!");
             // Calling getAppointments Function
             getAppointments();
-<<<<<<< HEAD
-            displayImage();
-=======
 
+            displayImage();
+           });
+    } 
+
+
+             function displayImage() {
             // Displays Stylist Image Dynamically
             var stylistContainer = document.getElementById('showImageHere');
             var img1 = document.createElement('img');
@@ -43,8 +46,6 @@ $(document).ready(function() {
 
             stylistContainer.appendChild(img1);
 
->>>>>>> 5fcc30ede2183a467ae618045bd113209f1a4f48
-        });
     }
 
     // Displays Stylist Image Dynamically
@@ -100,11 +101,13 @@ $(document).ready(function() {
 
                 // dynamically creates table - The comments section is commented out
         		$("#time").append("<tr><td>" + appTime + "</td></tr>");
-<<<<<<< HEAD
-        		$("#name").append("<tr><td><i class='fas fa-comment fa-lg' data-toggle='popover" + i + " 'title='Comment' data-content=" + comments + "'And here is some amazing content. It is very engaging. Right?'></i> " + name+ "</td></tr>");
-=======
+
         		$("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
->>>>>>> 5fcc30ede2183a467ae618045bd113209f1a4f48
+
+
+        		$("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
+
+
         		// $("#email").append("<tr><td>" + email + "</td></tr>");
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
@@ -112,10 +115,10 @@ $(document).ready(function() {
           // $("#comments").append("<h2>Appointment: "+appTime+"</h2><div class='row'><div class='col'>"+name+"<div class='col'>"+email+"<div class='col'>"+service+"<div class='commentStyle'>"+comments+"</div></div></div></div></div>");
         		//$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
     			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
-<<<<<<< HEAD
+
     	   
            }
-=======
+
 
 					// comment modal function
 					$('#comments').hide();
@@ -130,16 +133,16 @@ $(document).ready(function() {
 					});
 
     	   }
->>>>>>> 5fcc30ede2183a467ae618045bd113209f1a4f48
         }
     }// End of loopingAppointments functions
 
 
 
-<<<<<<< HEAD
+
+
     // -------------------------------------------------------------------
-=======
->>>>>>> 5fcc30ede2183a467ae618045bd113209f1a4f48
+
+
     //Show appointments by month for each stylist
     $('select').on('change', function(){
         monthSelected = this.value;

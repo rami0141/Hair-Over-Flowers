@@ -106,8 +106,8 @@ $(document).ready(function() {
         		// $("#email").append("<tr><td>" + email + "</td></tr>");
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
-
-          $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - "+appTime+"</h2><div><h4 class='text-center'>"+name+" - "+email+" - "+service+"</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: "+comments+"</h4></div></div>");
+              
+          $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - "+appTime+"</h2><div><h4 class='text-center'>"+name+" - "+email+" - "+service+"</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: "+comments+"</h4></div></div><br><br>");
 
         		//$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
     			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");    	   

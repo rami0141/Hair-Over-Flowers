@@ -22,9 +22,28 @@ $(document).ready(function() {
             stylistName = data.stylistName;
             // displays the stylist name in the admin page
             $("#message").append("Hello " + stylistName + "!");
+            console.log(stylistName);
             getAppointments();
+
+            // Displays Stylist Image Dynamically
+            var stylistContainer = document.getElementById('showImageHere');
+            var img1 = document.createElement('img');
+            $(img1).addClass("stylistImage");
+            
+            if (stylistName == "Mika Tan") {
+                console.log("This is Mika")
+                img1.src = "assets/images/stylist1.png";
+            }
+            else {
+                img1.src = "assets/images/stylist2.png";
+            }
+
+            stylistContainer.appendChild(img1);
+
         });
     }
+
+
 
     // -----------------------------------------------------------------
     // Pull Only one stylist appointments
@@ -47,7 +66,7 @@ $(document).ready(function() {
     		email = appointmentArray[i].email;
     		number = appointmentArray[i].phone;
     		service = appointmentArray[i].service;
-        comments = appointmentArray[i].comments;
+            comments = appointmentArray[i].comments;
 
             var today = new Date();
             var dd = today.getDate();
@@ -96,7 +115,7 @@ $(document).ready(function() {
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
-                $("#deleteApp").append("<tr><td><button type='button' class='btn btn-danger btn-sm' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
+                $("#deleteApp").append("<tr><td><button type='button' class='btn btn-danger btn-sm popoover'" + i + "'' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
             }
         }
     });

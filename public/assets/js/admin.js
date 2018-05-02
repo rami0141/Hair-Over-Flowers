@@ -29,7 +29,7 @@ $(document).ready(function() {
             var stylistContainer = document.getElementById('showImageHere');
             var img1 = document.createElement('img');
             $(img1).addClass("stylistImage");
-            
+
             if (stylistName == "Mika Tan") {
                 console.log("This is Mika")
                 img1.src = "assets/images/stylist1.png";
@@ -66,7 +66,7 @@ $(document).ready(function() {
     		email = appointmentArray[i].email;
     		number = appointmentArray[i].phone;
     		service = appointmentArray[i].service;
-            comments = appointmentArray[i].comments;
+        comments = appointmentArray[i].comments;
 
             var today = new Date();
             var dd = today.getDate();
@@ -78,19 +78,30 @@ $(document).ready(function() {
 
                 // dynamically creates table - The comments section is commented out
         		$("#time").append("<tr><td>" + appTime + "</td></tr>");
-        		$("#name").append("<tr><td><i class='fas fa-comment fa-lg' data-toggle='popover' title='Comment' data-content='And here is some amazing content. It is very engaging. Right?'></i> " + name+ "</td></tr>");
+        		$("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
         		// $("#email").append("<tr><td>" + email + "</td></tr>");
         		$("#number").append("<tr><td>" + number + "</td></tr>");
         		$("#service").append("<tr><td>" + service + "</td></tr>");
 
-                $("#comments").append("<tr><td>" + comments + "</td></tr>");
+          // $("#comments").append("<h2>Appointment: "+appTime+"</h2><div class='row'><div class='col'>"+name+"<div class='col'>"+email+"<div class='col'>"+service+"<div class='commentStyle'>"+comments+"</div></div></div></div></div>");
         		//$("#button").append("<tr><td><button class='btn btn-primary btn-sm delete" + i + "' type='button'>Check-In</button></td></tr>");
     			$("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
+
+					// comment modal function
+					$('#comments').hide();
+					$("#pop" + i).click(function(){
+						$('#appSection').fadeOut();
+						$('#comments').fadeIn();
+					});
+
+					$('#x').click(function(){
+						$('#appSection').fadeIn();
+						$('#comments').fadeOut();
+					});
 
     	   }
         }
     }// End of loopingAppointments functions
-
 
 
 

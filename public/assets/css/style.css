@@ -29,6 +29,19 @@ h1, h2, h3 {
    color: black;
  }
 
+ .fa-comment:hover {
+   color: #c4f3d3;
+ }
+
+#x {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: right;
+  padding: 1em;
+  cursor: default;
+}
+
+
 /* --------------Scroll Style------------- */
 
 .scroll {
@@ -117,7 +130,7 @@ nav a:hover {
 
 #message {
   font-family: 'Abril Fatface', cursive;
-  font-size: 4em;
+  font-size: 3em;
   color: black;
 }
 
@@ -130,6 +143,11 @@ nav a:hover {
 
 #services h1 {
   font-size: 4em;
+}
+
+#comments {
+  background-color: white;
+  color: black;
 }
 
 .servicesMenu:after {
@@ -192,4 +210,9 @@ background-color: #c4f3d3;
 
 #deleteApp button, #month, #monTime, #monName, #button button {
   margin: -1em;
+}
+
+#showImageHere img {
+  border: 15px solid black;
+   border-radius: 100%;
 }

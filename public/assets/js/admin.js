@@ -71,6 +71,17 @@ $(document).ready(function() {
         loopingAppointments(appointmentArray);
     }
 
+    // This will clear table data for an appointment that is deleted
+    function clearTable() {
+        $("#time").empty();
+        $("#name").empty();
+        $("#number").empty();
+        $("#service").empty();
+        $("#comments").empty();
+        $("#button").empty();
+        loopingAppointments(appointmentArray)
+    }
+
     // ----------------------------------------------------------------
     // This function will loop through all appointments and display only the appointments with todays date
     function loopingAppointments(appointmentArray) {
@@ -119,6 +130,7 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
+            clearTable()           
         });
       };
 

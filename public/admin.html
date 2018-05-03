@@ -84,7 +84,7 @@
       </div>
     </div>
     <!-- hidden modal will pop up when call upon -->
-    <div id="comments" class="container">
+    <div id="comments" class="container scroll">
       <h4 id="x">X</h4>
     </div>
     </div>
@@ -98,7 +98,7 @@
           </div>
           <div class="col-md-6">
             <div class="card">
-              <div class="card-body scroll">
+              <div class="card-header">
             <!-- Select a month and display appointments section -->
             <select>
               <option value="1">January</option>
@@ -116,9 +116,11 @@
             </select>
 
             <h3 class="text-center">Appointments By Month</h3>
+          </div>
 
           <!-- Dynamic Monthly Appointment Table -->
-          <table class="table whiteBG mt-5">
+          <div class="card-body scroll">
+          <table class="table whiteBG">
             <thead>
             <tr>
               <th scope="col"><h5 class="fancy-text">Date</h5></th>
@@ -137,8 +139,8 @@
             <td id="deleteApp"></td>
           </tr>
           </tbody>
-
         </table>
+        </div>
       </div>
       </div>
     </div>

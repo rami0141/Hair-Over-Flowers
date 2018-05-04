@@ -191,29 +191,34 @@
             <div id="appointmentForm">
               <div class="card">
                 <div class="card-body">
-                    <form id="resetForm">
+
+                <!-- FORM -->
+                    <form action="/send" id="resetForm" name="send" method="post">
                       <div class="row">
                         <div class="form-group col-md-4">
                           <label for="name">Name</label>
-                          <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                          <input type="name" name="name" class="form-control" id="name" placeholder="Full Name" required>
                         </div>
+
                         <div class="form-group col-md-4">
                           <label for="number">Phone Number</label>
-                          <input type="text" class="form-control" id="number" placeholder="000-000-0000" pattern="\d{3}-?\d{2}-?\d{4}" required>
+                          <input type="number" name="number" class="form-control" id="number" placeholder="000-000-0000" pattern="\d{3}-?\d{2}-?\d{4}" required>
                       </div>
+
                       <div class="form-group col-md-4">
                           <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="email" required>
+                          <input type="email" name="email" class="form-control" id="email" placeholder="email" required>
                       </div>
                       </div>
+
                       <div class="row">
                         <div class="form-group col-md-6">
-                          <label for="type">Service Type</label>
-                          <select class="form-control" id="serviceType" required>
+                          <label for="service">Service Type</label>
+                          <select type="service" name="service" class="form-control" id="serviceType" required>
                               <option disabled selected>Services</option>
-                            <option>Haircut</option>
-                            <option>Shampooing</option>
-                            <option>Coloring</option>
+                              <option>Haircut</option>
+                              <option>Shampooing</option>
+                              <option>Coloring</option>
                               <option>Styling</option>
                               <option>Perm</option>
                               <option>Relaxer</option>
@@ -222,19 +227,21 @@
                               <option>Extensions</option>
                          </select>
                         </div>
+
                         <div class="form-group col-md-6">
                           <label for="exampleFormControlSelect1">Stylist</label>
-                          <select class="form-control" id="stylist" required>
+                          <select type="stylist" name="stylist" class="form-control" id="stylist" required>
                             <option disabled selected>Stylist</option>
                             <option>Mika Tan</option>
                             <option>Roslina Jung</option>
                          </select>
                         </div>
                         </div>
+
                         <div class="form-row">
                           <div class="form-group col-md-4">
                           <label for="inputState">Appointment Month</label>
-                            <select id="appMonth" class="form-control" required>
+                            <select type="month" name="month" id="appMonth" class="form-control" required>
                               <option disabled selected>Month</option>
                               <option value="1">January</option>
                               <option value="2">February</option>
@@ -250,9 +257,10 @@
                               <option value="12">December</option>
                             </select>
                           </div>
+
                           <div class="form-group col-md-4">
                         <label for="inputState">Appointment Day</label>
-                            <select id="appDay" class="form-control" required>
+                            <select type="day" name="day" id="appDay" class="form-control" required>
                               <option disabled selected>Day</option>
                               <option>1</option>
                               <option>2</option>
@@ -290,31 +298,34 @@
 
                         <div class="form-group col-md-4">
                           <label for="exampleFormControlSelect1">Appointment Time</label>
-                          <select class="form-control" id="appTime" required>
+                          <select  type="time" name="time" class="form-control" id="appTime" required>
                             <option disabled selected>Time</option>
                             <option>9:00 am</option>
                             <option>10:00 am</option>
                             <option>11:00 am</option>
-                              <option>1:00 pm</option>
-                                <option>2:00 pm</option>
-                                <option>3:00 pm</option>
-                              <option>4:00 pm</option>
-                                <option>5:00 pm</option>
-                                <option>6:00 pm</option>
-                         </select>
+                            <option>1:00 pm</option>
+                            <option>2:00 pm</option>
+                            <option>3:00 pm</option>
+                            <option>4:00 pm</option>
+                            <option>5:00 pm</option>
+                            <option>6:00 pm</option>
+                          </select>
                         </div>
                         </div>
+
                         <div class="form-group">
                           <label for="comments">Comments</label>
-                          <textarea class="form-control" id="comments" rows="3"></textarea>
+                          <textarea type="comments" name="comments" class="form-control" id="comments" rows="3"></textarea>
                         </div>
-                        <span><button class="btn btn-dark" id="submitForm" type="submit">Submit</button></span>
+
+                        <span><button value="send" class="btn btn-dark" id="submitForm" type="submit" name="submit">Submit</button></span>
                         <span><button id="cancelForm" class="btn btn-danger">Cancel</button></span>
                     </form>
-                    </div>
-                  </div>
+                    <!-- END OF FORM -->
                 </div>
+              </div>
           </div>
+        </div>
       </div>
     </div>
 

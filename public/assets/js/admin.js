@@ -29,9 +29,7 @@ $(document).ready(function() {
 
     // ----------------------------------------------------------------
     // Displays Stylist Image Dynamically
-    function displayImage() {
-        //console.log(stylistName)
-        
+    function displayImage() {   
         var stylistContainer = document.getElementById('showImageHere');
         var img1 = document.createElement('img');
         $(img1).addClass("stylistImage");
@@ -109,7 +107,7 @@ $(document).ready(function() {
                 $("#service").append("<tr><td>" + service + "</td></tr>");              
                 $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + appTime + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");               
                 $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");          
-           }
+            }
                    // comment modal function
                    $('#comments').hide();
                    $("#pop" + i).click(function(){
@@ -130,7 +128,7 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
-            clearTable()           
+            clearTable();           
         });
       };
 
@@ -138,12 +136,14 @@ $(document).ready(function() {
     //Show appointments by month for each stylist
     $('select').on('change', getValue); 
     
+    // This function grabs the value of the month selected
     function getValue() {
         monthSelected = this.value;
         appointmentsByMonth(monthSelected);
-        console.log(monthSelected)
+        console.log(monthSelected);
     };
 
+   // Creates HTML for Appointments By Month Section 
    function appointmentsByMonth(monthSelected) {
         $("#month").empty();
         $("#monTime").empty();
@@ -160,8 +160,6 @@ $(document).ready(function() {
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;
                 name = appointmentArray[i].name;
-                console.log("Hello there")
-
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
@@ -175,10 +173,7 @@ $(document).ready(function() {
     $(document).on("click", "#deleteAppointment", deleteAppointmentHere); 
 
     function deleteAppointmentHere() {
-        console.log("Hello" + this.value);
         id = this.value;
-        console.log(id);
-
         $.ajax({
           method: "DELETE",
           url: "/api/appointments/" + id

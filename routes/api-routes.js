@@ -1,5 +1,6 @@
 // Requiring our model
 var db = require("../models");
+const nodemailer = require("nodemailer");
 
 // Routes
 // =============================================================
@@ -16,10 +17,38 @@ module.exports = function (app) {
 
     // POST route for saving a new appointment
     app.post("/api/appointments", function (req, res) {
+        console.log("creating appt");
         db.Appointment.create(req.body).then(function(dbAppointment) {
             res.json(dbAppointment);
+            // sending emails with SMTP, configuration using SMTP settings
+            var smtpTrans = nodemailer.createTransport({
+                host: 'smtp.gmail.com', //hostname
+                secureConnection: true,
+                port: 465, // port for secure SMTP
+                    auth: {
+                        user: process.env.email,
+                        pass: process.env.password
+                    },
+            });
+
+            // setup email data with unicode symbols
+            let mailOptions = {
+                from: "Appointment Scheduler",
+                to: process.env.email,
+                subject: 'Hair Over Flowers Appointment Confirmation',
+                text: `'This email is sent to confirm your appointment on '${req.body.month} ${req.body.day} ${req.body.time}`
+            }
+        // send mail with defined transport object
+            smtpTrans.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    return console.log(error);
+                }
+                console.log('Message sent: ', info.messageId);
+            });
+
         });
     });
+
 
     app.get("/api/appointments/:stylist", function (req, res) {
         console.log("stylist appt")

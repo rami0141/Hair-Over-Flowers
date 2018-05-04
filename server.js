@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const session = require('express-session');
 const passport = require('passport');
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 
@@ -39,40 +39,7 @@ require("./routes/user-api-routes.js")(app);
 require("./routes/auth.js")(app, passport);
 require("./config/passport.js")(passport, db.user, session);
 
-
-app.post("/send", (req, res) => {
-    console.log(req.body);
-
-// sending emails with SMTP, configuration using SMTP settings
-	var smtpTrans = nodemailer.createTransport({
-		host: 'smtp.gmail.com', //hostname
-		secureConnection: true,
-		port: 465, // port for secure SMTP
-			auth: {
-	 			user: process.env.email,
-				pass: process.env.password
-			},
-
-	});
-
-    // setup email data with unicode symbols
-    let mailOptions = {
-    	from: "Appointment Scheduler",
-     	to: process.env.email,
-    	subject: 'Hair Over Flowers Appointment Confirmation',
-    	text: `'This email is sent to confirm your appointment on '${req.body.month} ${req.body.day} ${req.body.time}`
-    }
-// send mail with defined transport object
-    smtpTrans.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: ', info.messageId);
-    });
- })
-	
-
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+app.listen(PORT, function() {
+   console.log("App listening on PORT " + PORT);
+});
 

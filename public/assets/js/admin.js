@@ -29,6 +29,7 @@ $(document).ready(function() {
 
     // ----------------------------------------------------------------
     // Displays Stylist Image Dynamically
+
     function displayImage() {
         //console.log(stylistName)
 
@@ -106,11 +107,12 @@ $(document).ready(function() {
                 $("#time").append("<tr><td>" + appTime + "</td></tr>");
                 $("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
                 $("#number").append("<tr><td>" + number + "</td></tr>");
-                $("#service").append("<tr><td>" + service + "</td></tr>");
-                $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + appTime + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");
-                $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='check1'><label id='label' class='form-check-label' for='check1'>Check</label></td></tr>");
-                // $("#button").append("<tr><td><button class='btn btn-danger btn-sm' id='checkIn"+i+"'>Check in</button><span id='checkTime"+i+"'></span></td></tr>");
-           }
+
+                $("#service").append("<tr><td>" + service + "</td></tr>");              
+                $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + appTime + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");               
+                $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");          
+            }
+
                    // comment modal function
                    $('#comments').hide();
                    $("#pop" + i).click(function(){
@@ -132,20 +134,23 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
-            clearTable()
+
+            clearTable();           
         });
       };
 
     // ------------------------------------------------------------------
     //Show appointments by month for each stylist
-    $('select').on('change', getValue);
+
+    $('select').on('change', getValue); 
 
     function getValue() {
         monthSelected = this.value;
         appointmentsByMonth(monthSelected);
-        console.log(monthSelected)
+        console.log(monthSelected);
     };
 
+   // Creates HTML for Appointments By Month Section 
    function appointmentsByMonth(monthSelected) {
         $("#month").empty();
         $("#monTime").empty();
@@ -162,8 +167,6 @@ $(document).ready(function() {
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;
                 name = appointmentArray[i].name;
-                console.log("Hello there")
-
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
@@ -177,10 +180,7 @@ $(document).ready(function() {
     $(document).on("click", "#deleteAppointment", deleteAppointmentHere);
 
     function deleteAppointmentHere() {
-        console.log("Hello" + this.value);
         id = this.value;
-        console.log(id);
-
         $.ajax({
           method: "DELETE",
           url: "/api/appointments/" + id

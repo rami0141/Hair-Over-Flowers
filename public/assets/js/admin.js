@@ -29,7 +29,10 @@ $(document).ready(function() {
 
     // ----------------------------------------------------------------
     // Displays Stylist Image Dynamically
-    function displayImage() {   
+
+    function displayImage() {
+        //console.log(stylistName)
+
         var stylistContainer = document.getElementById('showImageHere');
         var img1 = document.createElement('img');
         $(img1).addClass("stylistImage");
@@ -100,25 +103,28 @@ $(document).ready(function() {
             //if appointment day is equal to todays date, then it will display
             if (appointmentArray[i].appDay == dd && appointmentArray[i].appMonth == mm) {
                 todayArr.push(appointmentArray[i]);
-                // dynamically creates table - The comments section is commented out
+                // dynamically creates table
                 $("#time").append("<tr><td>" + appTime + "</td></tr>");
                 $("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
                 $("#number").append("<tr><td>" + number + "</td></tr>");
+
                 $("#service").append("<tr><td>" + service + "</td></tr>");              
                 $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + appTime + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");               
                 $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");          
             }
+
                    // comment modal function
                    $('#comments').hide();
                    $("#pop" + i).click(function(){
                    $('#appSection').fadeOut();
                    $('#comments').fadeIn();
                 });
-
+                  // x close out the comment modal
                    $('#x').click(function(){
                    $('#appSection').fadeIn();
                    $('#comments').fadeOut();
                });
+
            }
         }
 
@@ -128,15 +134,16 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
+
             clearTable();           
         });
       };
 
     // ------------------------------------------------------------------
     //Show appointments by month for each stylist
+
     $('select').on('change', getValue); 
-    
-    // This function grabs the value of the month selected
+
     function getValue() {
         monthSelected = this.value;
         appointmentsByMonth(monthSelected);
@@ -148,7 +155,7 @@ $(document).ready(function() {
         $("#month").empty();
         $("#monTime").empty();
         $("#monName").empty();
-        $("#deleteApp").empty();     
+        $("#deleteApp").empty();
         console.log("stylist", stylistName)
 
         for (var i = 0; i < appointmentArray.length; i++) {
@@ -170,7 +177,7 @@ $(document).ready(function() {
 
     // --------------------------------------------------------------------
     // Function for handling what happens when the delete button is pressed
-    $(document).on("click", "#deleteAppointment", deleteAppointmentHere); 
+    $(document).on("click", "#deleteAppointment", deleteAppointmentHere);
 
     function deleteAppointmentHere() {
         id = this.value;
@@ -180,5 +187,5 @@ $(document).ready(function() {
          }).done(function(){
             getAppointmentstwo();
         });
-    } 
+    }
  });// end of document.ready function

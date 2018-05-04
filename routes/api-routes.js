@@ -15,9 +15,11 @@ module.exports = function (app) {
         });
     });
 
-    // POST route for saving a new appointment
+    
+  // POST route for saving a new appointment
     app.post("/api/appointments", function (req, res) {
-        console.log("creating appt");
+        console.log("req.body");
+
         db.Appointment.create(req.body).then(function(dbAppointment) {
             res.json(dbAppointment);
             // sending emails with SMTP, configuration using SMTP settings
@@ -34,9 +36,11 @@ module.exports = function (app) {
             // setup email data with unicode symbols
             let mailOptions = {
                 from: "Appointment Scheduler",
-                to: process.env.email,
+                to: `${req.body.email}`,
                 subject: 'Hair Over Flowers Appointment Confirmation',
-                text: `'This email is sent to confirm your appointment on '${req.body.month} ${req.body.day} ${req.body.time}`
+                text: `Hello ${req.body.name},
+                This email is sent to confirm your appointment on ${req.body.appMonth}-${req.body.appDay} at ${req.body.appTime} with ${req.body.stylist} for ${req.body.service}.
+                If you have any questions or need to cancel your appointment, please call us...`
             }
         // send mail with defined transport object
             smtpTrans.sendMail(mailOptions, (error, info) => {
@@ -48,7 +52,6 @@ module.exports = function (app) {
 
         });
     });
-
 
     app.get("/api/appointments/:stylist", function (req, res) {
         console.log("stylist appt")

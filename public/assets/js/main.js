@@ -1,7 +1,7 @@
 $(document).ready(function() { 
   // FORM SUBMISSION
   var name = $("#name");
-  var number = $("#number");
+  var phone = $("#phone");
   var email = $("#email");
   var serviceType = $("#serviceType");
   var appMonth = $("#appMonth");
@@ -25,7 +25,7 @@ $(document).ready(function() {
       name: name
         .val()
         .trim(),
-      phone: number
+      phone: phone
         .val()
         .trim(),
       email: email

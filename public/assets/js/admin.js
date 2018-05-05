@@ -54,6 +54,7 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
            sortAppointmentsByTime();
+           sortByDay();
         });
       };
     // ---------------------------------------------------------------
@@ -70,6 +71,12 @@ $(document).ready(function() {
         appointmentArray.sort(compare);
         appointmentArray.sort(function (a, b) { return (b.appTime > a.appTime) ? 1 : (a.appTime > b.appTime) ? -1 : 0 });
         loopingAppointments(appointmentArray);
+    }
+
+     // ----------------------------------------------------------------
+     // This function sorts by Appointment Day
+    function sortByDay() {
+        appointmentArray.sort(function(a, b){return a.appDay - b.appDay});
     }
 
     // This will clear table data for an appointment that is deleted
@@ -134,10 +141,24 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
-
+            // sortAppointmentsByDay(appointmentArray);
             clearTable();           
         });
       };
+
+    //This function will sort the appointments by time
+    // function sortAppointmentsByDay() {
+    //     console.log(appointmentArray);
+    //      function compare(a, b) {
+    //         if (a.appDay > b.appDay)
+    //             return 1;
+    //         if (a.appDay < b.appDay)
+    //             return -1
+    //         return 0;
+    //     }
+    //     appointmentArray.sort(compare);
+    //     appointmentArray.sort(function (a, b) { return (b.appDay > a.appDay) ? 1 : (a.appDay > b.appDay) ? -1 : 0 });
+    // }
 
     // ------------------------------------------------------------------
     //Show appointments by month for each stylist
@@ -167,6 +188,9 @@ $(document).ready(function() {
                 appDay = appointmentArray[i].appDay;
                 appTime = appointmentArray[i].appTime;
                 name = appointmentArray[i].name;
+                //sortByDay(); 
+                //appointmentArray.sort(function(a, b){return a.appDay - b.appDay});
+
                 $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
                 $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");

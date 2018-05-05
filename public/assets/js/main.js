@@ -15,10 +15,6 @@ $(document).ready(function() {
 
   function handleFormSubmit() {
     event.preventDefault();
-    // Wont submit the form if the name and number is missing
-    // if (!name.val().trim() || !number.val().trim()) {
-    //   return;
-    // }
 
     // Constructing a newAppointment object to hand to the database
     var newAppointment = {

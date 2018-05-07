@@ -95,9 +95,9 @@ $(window).on("load", pullStylistInfo);
                 $("#time").append("<tr><td>" + aDate.toLocaleTimeString() + "</td></tr>");
                 $("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
                 $("#number").append("<tr><td>" + number + "</td></tr>");
-                $("#service").append("<tr><td>" + service + "</td></tr>");              
-                $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + aDate.toLocaleString() + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");               
-                $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");          
+                $("#service").append("<tr><td>" + service + "</td></tr>");
+                $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + aDate.toLocaleString() + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");
+                $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
             }
                    // comment modal function
                    $('#comments').hide();
@@ -121,12 +121,12 @@ $(window).on("load", pullStylistInfo);
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
             // sortAppointmentsByDay(appointmentArray);
-            clearTable();           
+            clearTable();
         });
       };
 
-$('select').on('change', getValue); 
-    
+$('select').on('change', getValue);
+
     // ------------------------------------------------------------------
     //Show appointments by month for each stylist
     function getValue() {
@@ -134,15 +134,15 @@ $('select').on('change', getValue);
         appointmentsByMonth(monthSelected);
     };
 
-   // Creates HTML for Appointments By Month Section 
+   // Creates HTML for Appointments By Month Section
    function appointmentsByMonth(monthSelected) {
         $("#month").empty();
         $("#monTime").empty();
         $("#monName").empty();
         $("#deleteApp").empty();
 
-        for (var i = 0; i < appointmentArray.length; i++) {   
-            aDate = new Date(appointmentArray[i].appDate);           
+        for (var i = 0; i < appointmentArray.length; i++) {
+            aDate = new Date(appointmentArray[i].appDate);
             if (aDate.getMonth() == monthSelected) {
                 var I_D = appointmentArray[i].id;
                 month = aDate.getMonth()+1
@@ -156,9 +156,9 @@ $('select').on('change', getValue);
             }
         }
     };
-  
+
 $(document).on("click", "#deleteAppointment", deleteAppointmentHere);
-    
+
     // --------------------------------------------------------------------
     // Function for handling what happens when the delete button is pressed
     function deleteAppointmentHere() {

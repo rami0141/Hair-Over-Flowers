@@ -8,11 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <!-- fullpage.js -->
-    <link rel="stylesheet" href="assets/css/jquery.fullpage.min.css">
     <!-- cldnr css -->
     <link rel="stylesheet" href="assets/css/full-clndr.css">
-
+    <!-- site icon -->
     <link rel="icon" type="image/png" href="assets/images/logo.PNG" />
     <!-- CSS Style -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -43,24 +41,22 @@
       </div>
     </nav>
 
-  <div id="fullpage">
     <!-- landing  -->
-    <div id="landingBG" class="section">
+    <div id="landingBG" class="sectionPadd">
+      <div class="admin">
     <!-- Dynamic hello -->
     <div id="showImageHere" class="text-center"></div>
     <div id="message" class="text-center"></div>
-
+      </div>
     </div>
 
     <!-- Appointments -->
-
-    <div id="appointments" class="section">
-      <div id="appSection" class="container-fluid">
+    <div id="appointments" class="sectionPadd">
+      <div id="appSection" class="container-fluid admin">
       <h2 id="today" class="text-center"></h2>
       <br>
-
     <!-- timeslots -->
-      <div id="timeSlots" class="calendar">
+      <div id="timeSlots">
         <table class="table whiteBG">
       <thead>
     <tr>
@@ -89,7 +85,8 @@
     </div>
     </div>
 
-    <div id="schedule" class="container-fluid section">
+      <!-- calendar -->
+    <div id="schedule" class="container-fluid sectionPadd">
         <div class="row">
           <div class="col-md-6">
             <!-- calendar -->
@@ -145,7 +142,6 @@
       </div>
     </div>
   </div>
-  </div>
 
 
     <!-- jquery -->
@@ -160,9 +156,6 @@
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <!-- babel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-
-    <!-- fullpage.js -->
-    <script src="assets/js/jquery.fullpage.min.js"></script>
     <!-- moment.js -->
     <script src="assets/js/moment.min.js"></script>
     <!-- underscore -->

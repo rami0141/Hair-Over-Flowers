@@ -4,6 +4,32 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
+.servicesMenu {
+    padding: 2em;
+    background-color: rgba(196, 243, 211, 0.5);
+}
+
+.border {
+  border: 10px solid white;
+}
+
+.card, #resetForm {
+background-color: #c4f3d3;
+}
+
+.card {
+  border: 5px solid black;
+}
+
+.card-deck .card {
+  margin: .5em;
+}
+
+.whiteBG {
+  background-color: white;
+  color: black;
+}
+
 .headline {
   padding-bottom: .5em;
   font-size: 3em;
@@ -162,39 +188,15 @@ nav a:hover {
   color: black;
 }
 
-.servicesMenu {
-    padding: 2em;
-    background-color: rgba(196, 243, 211, 0.5);
-}
-
-.border {
-  border: 10px solid white;
-}
-
 #appointments {
   background-color: black;
   color: white;
+  padding-top: 10em;
+  padding-bottom: 10em;
 }
 
 #today {
   color: #c4f3d3;
-}
-
-.card, #resetForm {
-background-color: #c4f3d3;
-}
-
-.card {
-  border: 5px solid black;
-}
-
-.card-deck .card {
-  margin: .5em;
-}
-
-.whiteBG {
-  background-color: white;
-  color: black;
 }
 
 #helloMessage {
@@ -204,6 +206,11 @@ background-color: #c4f3d3;
 #landingContent {
   padding-top: 20em;
   padding-bottom: 20em;
+}
+
+.admin {
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 #stylists {

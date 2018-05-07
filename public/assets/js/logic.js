@@ -1,7 +1,3 @@
-// fullpage.js
-    $('#fullpage').fullpage();
-
-
 // hello messgae on user page
     function message() {
         var greeting;
@@ -46,22 +42,10 @@ $('#appointmentBtn').click( function(){
   });
 
 
-
   //submit button form refresh fullpage
 
   var submit = $('#submitForm');
 
   submit.click(function(){
     location.reload();
-    // Temp message until we get the emailer running
-    alert("Appointment Received, Thank you!");
   });
-
-  //phone form 000-000-0000
-//   $('form').on('submit', function(){
-//
-//     $(this).find('input[name="number"]').each(function(){
-//         $(this).val() = $(this).val().replace(/-/g, '');
-//     });
-// });
-

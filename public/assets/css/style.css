@@ -244,12 +244,6 @@ nav a:hover {
   padding-bottom: 9em;
 }
 
-#schedule {
-  padding-top: 9em;
-  padding-bottom: 9em;
-}
-
-
 #leftclick, #rightclick {
   cursor: pointer;
   width: auto;

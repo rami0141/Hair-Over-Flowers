@@ -115,7 +115,7 @@ $(window).on("load", pullStylistInfo);
         }
 
     // -------------------------------------------------------------------
-    // Pulls appointments for stylist
+    // Pulls appointments for stylist when an appointment has been deleted
     function getAppointmentstwo() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
@@ -126,7 +126,7 @@ $(window).on("load", pullStylistInfo);
         });
       };
 
-$('select').on('change', getValue);
+    $('select').on('change', getValue);
 
     // ------------------------------------------------------------------
     //Show appointments by month for each stylist

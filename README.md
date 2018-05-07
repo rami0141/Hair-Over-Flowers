@@ -18,7 +18,7 @@ Coming Soon...
 - [Passport](https://www.npmjs.com/package/passport) Used for authentication requests
 - [Passport-local](https://www.npmjs.com/package/passport-local) User authentication
 - [Express-session](https://www.npmjs.com/package/express-session) Stores session data in the server side
-- [Nodemailer] (https://nodemailer.com/about/) Used for sending confirmation emails
+- [Nodemailer](https://nodemailer.com/about/) Used for sending confirmation emails
 - [CLNDR.js](http://kylestetz.github.io/CLNDR/) jQuery plugin for creating calendars
 
 ## Authors

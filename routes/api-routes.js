@@ -39,8 +39,11 @@ module.exports = function (app) {
                 to: `${req.body.email}`,
                 subject: 'Hair Over Flowers Appointment Confirmation',
                 text: `Hello ${req.body.name},
-                This email is sent to confirm your appointment on ${req.body.appMonth}-${req.body.appDay} at ${req.body.appTime} with ${req.body.stylist} for ${req.body.service}.
-                If you have any questions or need to cancel your appointment, please call us...`
+                
+                       This email is sent to confirm your appointment on ${req.body.appMonth}-${req.body.appDay} at ${req.body.appTime} with ${req.body.stylist} for ${req.body.service}.
+                If you have any questions or need to cancel your appointment, please call us at 000-000-0000...
+                
+                Have a lovely day!`
             }
         // send mail with defined transport object
             smtpTrans.sendMail(mailOptions, (error, info) => {

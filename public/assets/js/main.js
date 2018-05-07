@@ -9,13 +9,14 @@ $(document).ready(function() {
   var appTime = $("#appTime");
   var stylist = $("#stylist");
   var comments = $("#comments");
-
+  
+  
 
   $(document).on("click", "#submitForm", handleFormSubmit);
 
   function handleFormSubmit() {
     event.preventDefault();
-
+    var thisDate = new Date(2018,appMonth.val(),appDay.val(),appTime.val());
     // Constructing a newAppointment object to hand to the database
     var newAppointment = {
       name: name
@@ -30,15 +31,7 @@ $(document).ready(function() {
       service: serviceType
         .val()
         .trim(),
-      appMonth: appMonth
-        .val()
-        .trim(),
-      appDay: appDay
-        .val()
-        .trim(),
-      appTime: appTime
-        .val()
-        .trim(),
+      appDate: thisDate.toLocaleString(),
       stylist: stylist
         .val()
         .trim(),
@@ -46,7 +39,8 @@ $(document).ready(function() {
         .val()
     };
     console.log(newAppointment);
-    console.log(newAppointment.month);
+    console.log(thisDate.toLocaleString())
+
 
     // Will send data to the database
     $.post("/api/appointments", newAppointment).done(function (data) {

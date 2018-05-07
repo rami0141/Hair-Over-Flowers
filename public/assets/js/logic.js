@@ -49,13 +49,13 @@ $('#appointmentBtn').click( function(){
 
   //submit button form refresh fullpage
 
-  var submit = $('#submitForm');
+  // var submit = $('#submitForm');
 
-  submit.click(function(){
-    location.reload();
-    // Temp message until we get the emailer running
-    alert("Appointment Received, Thank you!");
-  });
+  // submit.click(function(){
+  //   location.reload();
+  //   // Temp message until we get the emailer running
+  //   alert("Appointment Received, Thank you!");
+  // });
 
   //phone form 000-000-0000
 //   $('form').on('submit', function(){

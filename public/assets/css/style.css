@@ -252,3 +252,9 @@ nav a:hover {
 #rightclick {
   position: relative;
 }
+
+#close {
+  font-family: sans-serif;
+  font-weight: bold;
+  cursor: default;
+}

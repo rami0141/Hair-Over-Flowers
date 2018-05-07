@@ -44,8 +44,8 @@ $('#appointmentBtn').click( function(){
 
   //submit button form refresh fullpage
 
-  var submit = $('#submitForm');
+  var close = $('#close');
 
-  submit.click(function(){
+  close.click(function(){
     location.reload();
   });

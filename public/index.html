@@ -540,12 +540,26 @@
                           <textarea type="comments" name="comments" class="form-control" id="comments" rows="3"></textarea>
                         </div>
 
-                        <span><button class="btn btn-dark" id="submitForm" type="submit" name="submit">Submit</button></span>
+                        <span><button class="btn btn-dark" id="submitForm" type="submit" name="submit" data-toggle="modal" data-target="#submitModal">Submit</button></span>
                         <span><button id="cancelForm" class="btn btn-danger">Cancel</button></span>
                     </form>
                     <!-- END OF FORM -->
                 </div>
               </div>
+              <!-- Modal -->
+            <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 id="close">x</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="text-center">Thank you! Email confirmation sent! Please check your email.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

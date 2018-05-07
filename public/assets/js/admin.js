@@ -119,6 +119,7 @@ $(window).on("load", pullStylistInfo);
     function getAppointmentstwo() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
+            sortByDay();
             appointmentsByMonth(monthSelected);
             // sortAppointmentsByDay(appointmentArray);
             clearTable();

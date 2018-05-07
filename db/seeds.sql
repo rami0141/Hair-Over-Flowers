@@ -33,7 +33,7 @@ INSERT INTO appointments (name, phone, email, service, appDate, stylist, comment
 VALUES ("Jon Snow", "612-846-7895", "jon@northernmail.com", "Shampooing", "5/10/2018, 1:00:00 PM", "Mika Tan","I have not washed my hair since winter started.", "2018-04-24", "2018-04-24"),
 ("Selina Santana", "514-879-4897", "selina@gmail", "Styling", "5/10/2018, 10:00:00 AM", "Mika Tan", "I want my hair to look just like the photo", "2018-04-24", "2018-04-24"),
 ("Jessica Jones", "444-876-4578", "jessica@yahoo.com", "Brazilian Blowout", "5/10/2018, 9:00:00 AM", "Mika Tan", "My hair is super curly and I hate it.", "2018-04-24", "2018-04-24"),
-("Gina Vang", "763-785-6795", "gina@yahoo.com", "Extensions", "5/10/2018, 11:00:00 PM", "Mika Tan", "I want longer hair", "2018-04-24", "2018-04-24"),
+("Gina Vang", "763-785-6795", "gina@yahoo.com", "Extensions", "5/10/2018, 11:00:00 AM", "Mika Tan", "I want longer hair", "2018-04-24", "2018-04-24"),
 ("Mia Zhang", "415-227-8469", "mia@umn.edu", "Coloring", "5/10/2018, 2:00:00 PM", "Roslina Jung", "I want my hair red!", "2018-04-24", "2018-04-24"),
 ("Steve Aoki", "548-879-6644", "aoki@cooldjs.com", "Styling", "5/10/2018, 9:00:00 AM", "Roslina Jung", "I need to look for my show.", "2018-04-24", "2018-04-24"),
 ("Barack Obama", "763-885-1354", "obama@presidents.com", "Haircut", "5/10/2018, 10:00:00 AM", "Roslina Jung", "Need to look sharp.", "2018-04-24", "2018-04-24"),

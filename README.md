@@ -3,7 +3,7 @@
 
 ![alt text](public/assets/images/hairoverflowers.PNG)
 
-Hairs Over Flowers is a hair salon appointment setter application. The app consists of both a user and an admin side. On the user side, the app displays a calendar with open time slots for hair appointment. The users can click on the available slots and enter in their contact information to make an appointment. On the admin side, the owner can login into it with his/her login info to view all customer appointments. 
+Hairs Over Flowers is a hair salon appointment setter application. The app consists of both a user and an admin side. On the user side, the app displays a calendar with open time slots for hair appointment. The users can click on the available slots and enter in their contact information to make an appointment. The user will receive a confirmation email when an appointment has been scheduled. On the admin side, the owner can login with his/her login info to view all customer appointments. Admin can delete appointments when a client calls to cancel.
 
 ## Deployed
 Coming Soon...
@@ -18,11 +18,12 @@ Coming Soon...
 - [Passport](https://www.npmjs.com/package/passport) Used for authentication requests
 - [Passport-local](https://www.npmjs.com/package/passport-local) User authentication
 - [Express-session](https://www.npmjs.com/package/express-session) Stores session data in the server side
+- [Nodemailer] (https://nodemailer.com/about/) Used for sending confirmation emails
 - [CLNDR.js](http://kylestetz.github.io/CLNDR/) jQuery plugin for creating calendars
 
 ## Authors
-* [Maiyer Thao](https://github.com/jaethao) - Front End (Graphic Design, UI, CLNDR.js) 
-* [Cristina Zhang](https://github.com/rami0141) - Back End (database, logic, passport.js)
+* [Maiyer Thao](https://github.com/jaethao) - Front End (Graphic Design, UI, CLNDR.js, Logic) 
+* [Cristina Zhang](https://github.com/rami0141) - Back End (Database, Logic, Nodemailer, Passport.js)
 
 ## Copyright
 

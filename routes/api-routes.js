@@ -40,8 +40,7 @@ module.exports = function (app) {
                 subject: 'Hair Over Flowers Appointment Confirmation',
                 text: `Hello ${req.body.name},
                 
-                       This email is sent to confirm your appointment on ${req.body.appMonth}-${req.body.appDay} at ${req.body.appTime} with ${req.body.stylist} for ${req.body.service}.
-                If you have any questions or need to cancel your appointment, please call us at 000-000-0000...
+                    This email is sent to confirm your appointment on ${req.body.appDate} with ${req.body.stylist} for ${req.body.service}.  If you have any questions or need to cancel your appointment, please call us at 000-000-0000...
                 
                 Have a lovely day!`
             }

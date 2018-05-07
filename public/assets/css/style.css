@@ -4,6 +4,22 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
+.headline {
+  padding-bottom: .5em;
+  font-size: 3em;
+}
+
+.imgCenter {
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+
+.sectionPadd {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
 .table td {
   border-top: none !important;
 }
@@ -138,11 +154,7 @@ nav a:hover {
   background-image: url('../images/service-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: #c4f3d3;
-}
-
-#services h1 {
-  font-size: 4em;
+  color: black;
 }
 
 #comments {
@@ -150,24 +162,14 @@ nav a:hover {
   color: black;
 }
 
-.servicesMenu:after {
-  content:'';
-  position: absolute;
-  background-color: white;
-  top:0px;
-  left: 0px;
-  width:95%;
-  height:100%;
-  z-index:-1;
-  opacity: 0.25; /* Here is your opacity */
-}
-
 .servicesMenu {
-    position: relative;
-    padding: 2.5em;
-    margin-left: 1em;
+    padding: 2em;
+    background-color: rgba(196, 243, 211, 0.5);
 }
 
+.border {
+  border: 10px solid white;
+}
 
 #appointments {
   background-color: black;
@@ -183,7 +185,11 @@ background-color: #c4f3d3;
 }
 
 .card {
-  border: 8px solid black;
+  border: 5px solid black;
+}
+
+.card-deck .card {
+  margin: .5em;
 }
 
 .whiteBG {
@@ -193,6 +199,11 @@ background-color: #c4f3d3;
 
 #helloMessage {
   font-size: 5em;
+}
+
+#landingContent {
+  padding-top: 20em;
+  padding-bottom: 20em;
 }
 
 #stylists {
@@ -215,4 +226,14 @@ background-color: #c4f3d3;
 #showImageHere img {
   border: 15px solid black;
    border-radius: 100%;
+}
+
+#stylistsbio {
+  padding-top: 5em;
+  padding-bottom: 9em;
+}
+
+#schedule {
+  padding-top: 9em;
+  padding-bottom: 9em;
 }

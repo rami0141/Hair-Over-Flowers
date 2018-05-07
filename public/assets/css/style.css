@@ -237,3 +237,11 @@ background-color: #c4f3d3;
   padding-top: 9em;
   padding-bottom: 9em;
 }
+
+#leftclick {
+  position: relative;
+}
+
+#rightclick {
+  position: relative;
+}

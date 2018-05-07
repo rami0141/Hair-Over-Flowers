@@ -4,6 +4,10 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
+.bottompadd {
+  padding-bottom: 3.5em;
+}
+
 .servicesMenu {
     padding: 2em;
     background-color: rgba(196, 243, 211, 0.5);
@@ -245,12 +249,24 @@ nav a:hover {
   padding-bottom: 9em;
 }
 
-#leftclick {
-  position: relative;
+
+#leftclick, #rightclick {
+  cursor: pointer;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
 }
 
 #rightclick {
-  position: relative;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#rightclick:hover, #leftclick:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
 #close {

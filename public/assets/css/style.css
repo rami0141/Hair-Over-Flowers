@@ -240,8 +240,7 @@ nav a:hover {
 }
 
 #stylistsbio {
-  padding-top: 5em;
-  padding-bottom: 9em;
+  padding-bottom: 3em;
 }
 
 #leftclick, #rightclick {
@@ -267,4 +266,8 @@ nav a:hover {
   font-family: sans-serif;
   font-weight: bold;
   cursor: default;
+}
+
+#schedule {
+  padding-top: 7em;
 }

@@ -38,13 +38,10 @@ $(document).ready(function() {
       comments: comments
         .val()
     };
-    console.log(newAppointment);
-    console.log(thisDate.toLocaleString())
-
 
     // Will send data to the database
     $.post("/api/appointments", newAppointment).done(function (data) {
-      console.log("database post:", data);
+      //console.log("database post:", data);
     });
     document.getElementById("resetForm").reset();
   }

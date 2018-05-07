@@ -53,22 +53,16 @@ $(document).ready(function() {
     function getAppointments() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
-           sortAppointmentsByTime();
+           // sortAppointmentsByTime();
+           sortByDay();
         });
       };
-    // ---------------------------------------------------------------
-    //This function will sort the appointments by time
-    function sortAppointmentsByTime() {
-        console.log(appointmentArray);
-         function compare(a, b) {
-            if (a.appTime > b.appTime)
-                return 1;
-            if (a.appTime < b.appTime)
-                return -1
-            return 0;
-        }
-        appointmentArray.sort(compare);
-        appointmentArray.sort(function (a, b) { return (b.appTime > a.appTime) ? 1 : (a.appTime > b.appTime) ? -1 : 0 });
+
+     // ----------------------------------------------------------------
+     // This function sorts by Appointment
+    function sortByDay() {
+        appointmentArray.sort(function(a, b){return new Date(a.appDate) - new Date(b.appDate)});
+        console.log(appointmentArray)
         loopingAppointments(appointmentArray);
     }
 
@@ -89,7 +83,7 @@ $(document).ready(function() {
         for (var i = 0; i < appointmentArray.length; i++) {
             // declaring variables
             var iD = appointmentArray[i].id
-            appTime = appointmentArray[i].appTime;
+            aDate = new Date(appointmentArray[i].appDate);
             name = appointmentArray[i].name;
             email = appointmentArray[i].email;
             number = appointmentArray[i].phone;
@@ -98,18 +92,19 @@ $(document).ready(function() {
 
             var today = new Date();
             var dd = today.getDate();
-            var mm = today.getMonth()+1;
+            var mm = today.getMonth();
 
             //if appointment day is equal to todays date, then it will display
-            if (appointmentArray[i].appDay == dd && appointmentArray[i].appMonth == mm) {
+            if (aDate.getMonth() == mm) {
                 todayArr.push(appointmentArray[i]);
+                console.log(appointmentArray);
                 // dynamically creates table
-                $("#time").append("<tr><td>" + appTime + "</td></tr>");
+                $("#time").append("<tr><td>" + aDate.toLocaleTimeString() + "</td></tr>");
                 $("#name").append("<tr><td><i id='pop" + i + "'class='fas fa-comment fa-lg' title='comment'></i> " + name + "</td></tr>");
                 $("#number").append("<tr><td>" + number + "</td></tr>");
 
                 $("#service").append("<tr><td>" + service + "</td></tr>");              
-                $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + appTime + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");               
+                $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + aDate.toLocaleString() + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");               
                 $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");          
             }
 
@@ -134,10 +129,11 @@ $(document).ready(function() {
         $.get("/api/appointments/" + stylistName, function (data) {
             appointmentArray = data;
             appointmentsByMonth(monthSelected);
-
+            // sortAppointmentsByDay(appointmentArray);
             clearTable();           
         });
       };
+
 
     // ------------------------------------------------------------------
     //Show appointments by month for each stylist
@@ -156,19 +152,17 @@ $(document).ready(function() {
         $("#monTime").empty();
         $("#monName").empty();
         $("#deleteApp").empty();
-        console.log("stylist", stylistName)
 
-        for (var i = 0; i < appointmentArray.length; i++) {
-            if (appointmentArray[i].appMonth == monthSelected) {
-                newArr.push(appointmentArray[i]);
-
+        for (var i = 0; i < appointmentArray.length; i++) {   
+            aDate = new Date(appointmentArray[i].appDate);           
+            if (aDate.getMonth() == monthSelected) {
                 var I_D = appointmentArray[i].id;
-                appMonth = appointmentArray[i].appMonth;
-                appDay = appointmentArray[i].appDay;
-                appTime = appointmentArray[i].appTime;
+                month = aDate.getMonth()+1
+                day = aDate.getDate();
                 name = appointmentArray[i].name;
-                $("#month").append("<tr><td>" + appMonth + "-" + appDay + "</td></tr>");
-                $("#monTime").append("<tr><td>" + appTime + "</td></tr>");
+
+                $("#month").append("<tr><td>" + month + "/" + day + "</td></tr>");
+                $("#monTime").append("<tr><td>" + aDate.toLocaleTimeString() + "</td></tr>");
                 $("#monName").append("<tr><td>" + name + "</td></tr>");
                 $("#deleteApp").append("<tr><td><button type='button' class='btn btn-danger btn-sm popoover'" + i + "'' id='deleteAppointment' value='" + I_D + "'>Delete</button></td></tr>");
             }
@@ -188,4 +182,5 @@ $(document).ready(function() {
             getAppointmentstwo();
         });
     }
+
  });// end of document.ready function

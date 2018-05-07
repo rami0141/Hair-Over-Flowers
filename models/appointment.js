@@ -6,9 +6,7 @@
         phone: { type: DataTypes.STRING },
         email: { type: DataTypes.STRING },
         service: { type: DataTypes.STRING },
-        appMonth: { type: DataTypes.STRING  },
-        appDay: { type: DataTypes.STRING },
-        appTime: { type: DataTypes.STRING, allowNull: false },
+        appDate: { type: DataTypes.STRING, allowNull: false },
         stylist: { type: DataTypes.STRING, allowNull: false },
         comments: { type: DataTypes.STRING, allowNull: false }
     });

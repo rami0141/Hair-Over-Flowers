@@ -67,7 +67,7 @@ $(window).on("load", pullStylistInfo);
         $("#number").empty();
         $("#service").empty();
         $("#comments").empty();
-        $("#button").empty();
+        // $("#button").empty();
         loopingAppointments(appointmentArray)
     }
 
@@ -97,7 +97,7 @@ $(window).on("load", pullStylistInfo);
                 $("#number").append("<tr><td>" + number + "</td></tr>");
                 $("#service").append("<tr><td>" + service + "</td></tr>");
                 $("#comments").append("<div class='container'><h2 class='text-center'>Appointment - " + aDate.toLocaleString() + "</h2><div><h4 class='text-center'>" + name + " - " + email + " - " + service + "</h4></div><div class='commentStyle'><h4 class='text-center'>Comment: " + comments + "</h4></div></div><br><br>");
-                $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
+                // $("#button").append("<tr><td><input class='form-check-input delete' type='checkbox' id='defaultCheck1'><label class='form-check-label' for='defaultCheck1'>Check</label></td></tr>");
             }
                    // comment modal function
                    $('#comments').hide();

@@ -5,6 +5,9 @@
 
 Hairs Over Flowers is a hair salon appointment setter application. The app consists of both a user and an admin side. On the user side, the app displays a calendar with open time slots for hair appointment. The users can click on the available slots and enter in their contact information to make an appointment. The user will receive a confirmation email when an appointment has been scheduled. On the admin side, the owner can login with his/her login info to view all customer appointments. Admin can delete appointments when a client calls to cancel.
 
+##Video Demo
+https://vimeo.com/268649613
+
 ## Deployed
 Coming Soon...
 
@@ -22,7 +25,7 @@ Coming Soon...
 - [CLNDR.js](http://kylestetz.github.io/CLNDR/) jQuery plugin for creating calendars
 
 ## Authors
-* [Maiyer Thao](https://github.com/jaethao) - Front End (Graphic Design, UI, CLNDR.js, Logic) 
+* [Maiyer Thao](https://github.com/jaethao) - Front End (Graphic Design, UI, CLNDR.js, Logic)
 * [Cristina Zhang](https://github.com/rami0141) - Back End (Database, Logic, Nodemailer, Passport.js)
 
 ## Copyright

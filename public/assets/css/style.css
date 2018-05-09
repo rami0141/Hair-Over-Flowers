@@ -4,6 +4,23 @@ h1, h2, h3 {
   font-family: 'Abril Fatface', cursive;
 }
 
+i {
+  color: white;
+}
+
+nav {
+  color: white;
+  background-color: black;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: #c4f3d3;
+}
+
 .bottompadd {
   padding-bottom: 3.5em;
 }
@@ -66,10 +83,6 @@ background-color: #c4f3d3;
    padding: 1.5em;
  }
 
- i {
-   color: white;
- }
-
  .fa-comment {
    color: black;
  }
@@ -86,36 +99,9 @@ background-color: #c4f3d3;
   cursor: default;
 }
 
-
-/* --------------Scroll Style------------- */
-
-.scroll {
-    weight: 100%;
-    max-height: 500px;
-    overflow: auto;
+#x:hover {
+  color: #c4f3d3;
 }
-
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* ---------end of srcoll------------ */
 
 #timeSlots table {
   border: 10px solid #c4f3d3;
@@ -153,18 +139,6 @@ background-color: #c4f3d3;
   padding-top: .25em;
 }
 
-nav {
-  color: white;
-  background-color: black;
-}
-
-nav a {
-  color: white;
-}
-
-nav a:hover {
-  color: #c4f3d3;
-}
 
 #landingBG {
   background-image: url('../images/hairBG2.jpg');
@@ -261,6 +235,40 @@ nav a:hover {
   cursor: default;
 }
 
+#close:hover {
+  color: #c4f3d3;
+}
+
 #schedule {
   padding-top: 7em;
 }
+
+/* --------------Scroll Style------------- */
+
+.scroll {
+    weight: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---------end of srcoll------------ */

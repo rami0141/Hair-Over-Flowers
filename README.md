@@ -9,7 +9,7 @@ Hairs Over Flowers is a hair salon appointment setter application. The app consi
 https://vimeo.com/268649613
 
 ## Deployed
-Coming Soon...
+http://hairoverflowers.com/
 
 ## Built With
 - [Node.js](https://nodejs.org/en/download/) Open source server framework for using JavaScript

@@ -24,6 +24,35 @@ http://hairoverflowers.com/
 - [Nodemailer](https://nodemailer.com/about/) Used for sending confirmation emails
 - [CLNDR.js](http://kylestetz.github.io/CLNDR/) jQuery plugin for creating calendars
 
+## Installing Hair-Over-Flowers
+
+1) From git bash, Terminal or Command Prompt, clone this repository to a directory on your computer.
+
+
+git clone https://github.com/rami0141/hair-over-flowers.git
+
+## change to the application directory
+
+```
+cd hair-over-flowers
+```
+
+## install the required packages
+```
+npm install
+```
+
+Users will need to add a file named '.env' to the project folder.
+Add these lines to the file:
+```
+MYSQL_PASSWORD=?????????
+MYSQL_USERNAME=?????????
+```
+
+Replace the question marks with your MySQL password and username.
+
+Use the schema and seeds file to create the database.
+
 ## Authors
 * [Maiyer Thao](https://github.com/jaethao) - Front End (Graphic Design, UI, CLNDR.js, Logic)
 * [Cristina Zhang](https://github.com/rami0141) - Back End (Database, Logic, Nodemailer, Passport.js)
